@@ -1,0 +1,1 @@
+"Her er berre tekst"
