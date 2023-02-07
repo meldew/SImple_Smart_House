@@ -23,7 +23,6 @@ class Floor:
         self.floor_no = floor_no
         self.rooms = []
 
-
 class SmartHouse:
     """Den sentrale klasse i et smart hus system.
         Den forvalter etasjer, rom og enheter.
@@ -71,7 +70,7 @@ class SmartHouse:
     def get_no_of_sensors(self):
         """Git tilbake antall av registrerte sensorer i huset."""
         return NotImplemented
-
+    
     def get_no_of_actuators(self):
         """Git tilbake antall av registrerte aktuatorer i huset."""
         return NotImplemented
