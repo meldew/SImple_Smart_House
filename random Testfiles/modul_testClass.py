@@ -18,12 +18,14 @@ class Sensorer(object):
         self.enhetstype = enhetstype
         Device().add_to_list(self)
 
+
 class Aktuatorer(object):
     def __init__(self, serienummer, enhetstype):
         self.serienummer = serienummer
         self.enhetstype = enhetstype
         Device().add_to_list(self)
-        
+
+
 class Fuktighetssensor(Sensorer):
     def __init__(self,verdi:float, produsent:str, produktnavn:str, serienummer:str):
         super().__init__(serienummer, "Fuktighetssensor")
