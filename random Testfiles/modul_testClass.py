@@ -6,7 +6,6 @@
 list_with_devices = []
 list_with_sensors = []
 list_with_aktuators = []
-
 class Device:
     def add_to_list(self, obj):
         list_with_devices.append(obj)
@@ -200,7 +199,7 @@ class Billader(Aktuatorer):
 
 
 
-
+strømmåler = Strømmåler(0.5,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
 pumpe1 = Varmepumpe(True,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
 temp1 = TemperaturSensor(30.3,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
 temp2 = TemperaturSensor(35.3,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
@@ -213,7 +212,11 @@ fukt2 = Fuktighetssensor(20.5,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
 fukt3 = Fuktighetssensor(17.4,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
 
 print(len(list_with_aktuators))
+print(len(list_with_sensors))
 print(len(list_with_devices))
-print(list_with_aktuators[0].state)
-print(list_with_aktuators[3].state)
-print(list_with_aktuators[2].state)
+print(list_with_sensors[4].verdi)
+#print(list_with_sensors[0])
+print(repr(list_with_sensors[3]))
+# print(list_with_aktuators[0].state)
+# print(list_with_aktuators[3].state)
+# print(list_with_aktuators[2].state)
