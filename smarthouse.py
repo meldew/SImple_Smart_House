@@ -1,4 +1,4 @@
-from devices import Device
+from devices import * 
 from typing import List, Optional
 
 

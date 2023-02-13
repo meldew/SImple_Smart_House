@@ -210,7 +210,6 @@ lys3 = Smartlys(True,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
 fukt1 = Fuktighetssensor(20.3,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
 fukt2 = Fuktighetssensor(20.5,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
 fukt3 = Fuktighetssensor(17.4,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
-
 print(len(list_with_aktuators))
 print(len(list_with_sensors))
 print(len(list_with_devices))
