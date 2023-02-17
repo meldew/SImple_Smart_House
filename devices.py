@@ -195,28 +195,3 @@ class Billader(Aktuatorer):
     
     def __repr__(self):
         return f'Aktuator ({self.__serienummerInternal}) Type: Billader STATUS: {self.state} PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
-
-
-
-
-strømmåler = Strømmåler(0.5,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
-pumpe1 = Varmepumpe(True,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
-temp1 = TemperaturSensor(30.3,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
-temp2 = TemperaturSensor(35.3,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
-temp3 = TemperaturSensor(37.3,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
-lys1 = Smartlys(True,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
-lys2 = Smartlys(False,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
-lys3 = Smartlys(True,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
-fukt1 = Fuktighetssensor(20.3,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
-fukt2 = Fuktighetssensor(20.5,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
-fukt3 = Fuktighetssensor(17.4,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
-
-print(len(list_with_aktuators))
-print(len(list_with_sensors))
-print(len(list_with_devices))
-print(list_with_sensors[4].verdi)
-#print(list_with_sensors[0])
-print(repr(list_with_sensors[3]))
-# print(list_with_aktuators[0].state)
-# print(list_with_aktuators[3].state)
-# print(list_with_aktuators[2].state)

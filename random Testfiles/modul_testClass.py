@@ -6,9 +6,29 @@
 list_with_devices = []
 list_with_sensors = []
 list_with_aktuators = []
+
+class Room:
+    """Representerer et rom i en etasje i ett hus.
+        Et rom har et areal og det kan gis et kort navn.
+        På et romm kan også registreres smarte enheter."""
+
+    def __init__(self, area: float, name: str = None):
+        self.area = area
+        self.name = name
+
+    def __repr__(self):
+        return f"{self.name} ({self.area} m^2)"
+
+
+
 class Device:
     def add_to_list(self, obj):
         list_with_devices.append(obj)
+
+    def Create_actuator(self):
+        Sensorer() 
+    def Create_(self):
+        Sensorer()            
 
 
 class Sensorer(object):
@@ -197,25 +217,36 @@ class Billader(Aktuatorer):
         return f'Aktuator ({self.__serienummerInternal}) Type: Billader STATUS: {self.state} PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
 
 
+# strømmåler = Strømmåler(0.5,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
+# pumpe1 = Varmepumpe(True,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
+# temp1 = TemperaturSensor(30.3,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
+# temp2 = TemperaturSensor(35.3,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
+# temp3 = TemperaturSensor(37.3,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb6")
+# lys1 = Smartlys(True,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
+# lys2 = Smartlys(False,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
+# lys3 = Smartlys(True,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
+# fukt1 = Fuktighetssensor(20.3,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
+# fukt2 = Fuktighetssensor(20.5,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
+# fukt3 = Fuktighetssensor(17.4,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
 
 
-strømmåler = Strømmåler(0.5,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
-pumpe1 = Varmepumpe(True,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
-temp1 = TemperaturSensor(30.3,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
-temp2 = TemperaturSensor(35.3,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
-temp3 = TemperaturSensor(37.3,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
-lys1 = Smartlys(True,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
-lys2 = Smartlys(False,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
-lys3 = Smartlys(True,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
-fukt1 = Fuktighetssensor(20.3,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
-fukt2 = Fuktighetssensor(20.5,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
-fukt3 = Fuktighetssensor(17.4,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0")
-print(len(list_with_aktuators))
-print(len(list_with_sensors))
-print(len(list_with_devices))
-print(list_with_sensors[4].verdi)
+def register_device(device: Device, room: Room): # Fikse
+    pass
+# print(len(list_with_aktuators))
+# print(len(list_with_sensors))
+# print(len(list_with_devices))
+# print(list_with_sensors[4].verdi)
 #print(list_with_sensors[0])
-print(repr(list_with_sensors[3]))
+# print(repr(list_with_sensors[3]))
 # print(list_with_aktuators[0].state)
 # print(list_with_aktuators[3].state)
 # print(list_with_aktuators[2].state)
+
+register_device(Smartlys(True,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb3"),Room(10,"Room No one"))
+register_device(Smartlys(True,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0"),Room(10,"Room No one"))
+register_device(TemperaturSensor(37.3,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb6"),Room(10,"Room No one"))
+
+print(len(list_with_aktuators))
+print(len(list_with_devices))
+print(len(list_with_sensors))
+print(repr(list_with_devices[0]))

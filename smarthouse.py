@@ -60,29 +60,25 @@ class SmartHouse:
         return NotImplemented
 
     def register_device(self, device: Device, room: Room):
-        """Registrerer en enhet i et gitt rom."""
-        return NotImplemented
+        pass
 
-    def get_no_of_devices(self):
-        """Gir tilbake antall registrerte enheter i huset."""
-        return NotImplemented
+    def get_no_of_devices(self):        
+        return len(list_with_devices)
 
-    def get_no_of_sensors(self):
-        """Git tilbake antall av registrerte sensorer i huset."""
-        return NotImplemented
+    def get_no_of_sensors(self):  
+        return len(list_with_sensors) 
     
-    def get_no_of_actuators(self):
-        """Git tilbake antall av registrerte aktuatorer i huset."""
-        return NotImplemented
+    def get_no_of_actuators(self): 
+        return len(list_with_aktuators)
 
-    def move_device(self, device: Device, from_room: Room, to_room: Room):
+    def move_device(self, device: Device, from_room: Room, to_room: Room): 
         """Flytter en enhet fra et gitt romm til et annet."""
         return NotImplemented
 
     def find_device_by_serial_no(self, serial_no: str) -> Optional[Device]:
-        """Prøver å finne en enhet blant de registrerte enhetene ved å
-        søke opp dens serienummer."""
-        return NotImplemented
+        for device in list_with_devices:
+            if device.serienummer == serial_no:
+                return device   
 
     def get_room_with_device(self, device: Device):
         """Gir tilbake rommet der en gitt enhet er resitrert."""
