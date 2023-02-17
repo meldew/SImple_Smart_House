@@ -1,0 +1,639 @@
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1481px" height="1034px" viewBox="-0.5 -0.5 1481 1034" content="&lt;mxfile&gt;&lt;diagram id=&quot;DOqUcIz5evtRUQL5rmOf&quot; name=&quot;Page-1&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs>
+        <clipPath id="mx-clip-244-181-152-54-0">
+            <rect x="244" y="181" width="152" height="54"/>
+        </clipPath>
+        <clipPath id="mx-clip-244-243-152-26-0">
+            <rect x="244" y="243" width="152" height="26"/>
+        </clipPath>
+        <clipPath id="mx-clip-1084-181-152-54-0">
+            <rect x="1084" y="181" width="152" height="54"/>
+        </clipPath>
+        <clipPath id="mx-clip-524-31-432-30-0">
+            <rect x="524" y="31" width="432" height="30"/>
+        </clipPath>
+        <clipPath id="mx-clip-524-69-432-276-0">
+            <rect x="524" y="69" width="432" height="276"/>
+        </clipPath>
+        <clipPath id="mx-clip-284-571-152-84-0">
+            <rect x="284" y="571" width="152" height="84"/>
+        </clipPath>
+        <clipPath id="mx-clip-1044-571-152-84-0">
+            <rect x="1044" y="571" width="152" height="84"/>
+        </clipPath>
+        <clipPath id="mx-clip-764-661-153-94-0">
+            <rect x="764" y="661" width="153" height="94"/>
+        </clipPath>
+        <clipPath id="mx-clip-764-763-153-42-0">
+            <rect x="764" y="763" width="153" height="42"/>
+        </clipPath>
+        <clipPath id="mx-clip-4-661-152-94-0">
+            <rect x="4" y="661" width="152" height="94"/>
+        </clipPath>
+        <clipPath id="mx-clip-4-763-152-22-0">
+            <rect x="4" y="763" width="152" height="22"/>
+        </clipPath>
+        <clipPath id="mx-clip-1324-891-152-94-0">
+            <rect x="1324" y="891" width="152" height="94"/>
+        </clipPath>
+        <clipPath id="mx-clip-1324-993-152-42-0">
+            <rect x="1324" y="993" width="152" height="42"/>
+        </clipPath>
+        <clipPath id="mx-clip-764-891-152-94-0">
+            <rect x="764" y="891" width="152" height="94"/>
+        </clipPath>
+        <clipPath id="mx-clip-764-993-152-42-0">
+            <rect x="764" y="993" width="152" height="42"/>
+        </clipPath>
+        <clipPath id="mx-clip-564-661-152-94-0">
+            <rect x="564" y="661" width="152" height="94"/>
+        </clipPath>
+        <clipPath id="mx-clip-564-763-152-26-0">
+            <rect x="564" y="763" width="152" height="26"/>
+        </clipPath>
+        <clipPath id="mx-clip-164-831-152-94-0">
+            <rect x="164" y="831" width="152" height="94"/>
+        </clipPath>
+        <clipPath id="mx-clip-164-933-152-24-0">
+            <rect x="164" y="933" width="152" height="24"/>
+        </clipPath>
+        <clipPath id="mx-clip-1144-891-152-94-0">
+            <rect x="1144" y="891" width="152" height="94"/>
+        </clipPath>
+        <clipPath id="mx-clip-1144-993-152-42-0">
+            <rect x="1144" y="993" width="152" height="42"/>
+        </clipPath>
+        <clipPath id="mx-clip-404-831-152-94-0">
+            <rect x="404" y="831" width="152" height="94"/>
+        </clipPath>
+        <clipPath id="mx-clip-404-933-152-26-0">
+            <rect x="404" y="933" width="152" height="26"/>
+        </clipPath>
+        <clipPath id="mx-clip-944-891-152-94-0">
+            <rect x="944" y="891" width="152" height="94"/>
+        </clipPath>
+        <clipPath id="mx-clip-944-993-152-42-0">
+            <rect x="944" y="993" width="152" height="42"/>
+        </clipPath>
+        <clipPath id="mx-clip-664-435-152-34-0">
+            <rect x="664" y="435" width="152" height="34"/>
+        </clipPath>
+        <clipPath id="mx-clip-1324-651-152-94-0">
+            <rect x="1324" y="651" width="152" height="94"/>
+        </clipPath>
+        <clipPath id="mx-clip-1324-753-152-42-0">
+            <rect x="1324" y="753" width="152" height="42"/>
+        </clipPath>
+    </defs>
+    <g>
+        <path d="M 400 176 L 400 161.7 Q 400 150 388.3 150 L 251.7 150 Q 240 150 240 161.7 L 240 176" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 240 176 L 240 252.3 Q 240 264 251.7 264 L 388.3 264 Q 400 264 400 252.3 L 400 176" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 240 176 L 400 176" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" font-weight="bold" pointer-events="none" text-anchor="middle" font-size="12px">
+            <text x="319.5" y="167.5">
+                Room
+            </text>
+        </g>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-244-181-152-54-0)" font-size="12px">
+            <text x="245.5" y="193.5">
+                + area: float
+            </text>
+            <text x="245.5" y="207.5">
+                + name : str
+            </text>
+        </g>
+        <path d="M 240 234 L 400 234" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-244-243-152-26-0)" font-size="12px">
+            <text x="245.5" y="255.5">
+                +__repr__: str
+            </text>
+        </g>
+        <path d="M 1240 176 L 1240 161.7 Q 1240 150 1228.3 150 L 1091.7 150 Q 1080 150 1080 161.7 L 1080 176" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 1080 176 L 1080 218.3 Q 1080 230 1091.7 230 L 1228.3 230 Q 1240 230 1240 218.3 L 1240 176" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 1080 176 L 1240 176" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" font-weight="bold" pointer-events="none" text-anchor="middle" font-size="12px">
+            <text x="1159.5" y="167.5">
+                Floor
+            </text>
+        </g>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-1084-181-152-54-0)" font-size="12px">
+            <text x="1085.5" y="193.5">
+                + floor_no: int
+            </text>
+            <text x="1085.5" y="207.5">
+                + rooms: []
+            </text>
+        </g>
+        <path d="M 960 26 L 960 11.7 Q 960 0 948.3 0 L 531.7 0 Q 520 0 520 11.7 L 520 26" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 520 26 L 520 328.3 Q 520 340 531.7 340 L 948.3 340 Q 960 340 960 328.3 L 960 26" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 520 26 L 960 26" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" font-weight="bold" pointer-events="none" text-anchor="middle" font-size="12px">
+            <text x="739.5" y="17.5">
+                SmartHouse
+            </text>
+        </g>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-524-31-432-30-0)" font-size="12px">
+            <text x="525.5" y="43.5">
+                + floors:[]
+            </text>
+        </g>
+        <path d="M 520 60 L 960 60" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-524-69-432-276-0)" font-size="12px">
+            <text x="525.5" y="81.5">
+                + create_floor(self): Floor
+            </text>
+            <text x="525.5" y="95.5">
+                + create_room(self,floor_no: int, area: float, name : str = none) : Room
+            </text>
+            <text x="525.5" y="109.5">
+                + get_no_of_rooms(self) : int
+            </text>
+            <text x="525.5" y="123.5">
+                + get_all_devices(self) : List [Device]
+            </text>
+            <text x="525.5" y="137.5">
+                + get_all_rooms(self) : List [Room]
+            </text>
+            <text x="525.5" y="151.5">
+                + get_total_area(self) : float
+            </text>
+            <text x="525.5" y="165.5">
+                + register_device(self, devise : Device, room : Room)
+            </text>
+            <text x="525.5" y="179.5">
+                + get_no_of_devices(self)
+            </text>
+            <text x="525.5" y="193.5">
+                + get_no_of_sensors(self)
+            </text>
+            <text x="525.5" y="207.5">
+                + get_no_of_actuators(self)
+            </text>
+            <text x="525.5" y="221.5">
+                + move_device(self, device : Device, from_room :Room, to_room : Room)
+            </text>
+            <text x="525.5" y="235.5">
+                + find_device_by_serial_no(self, serial_no : str) : Optional [Device]
+            </text>
+            <text x="525.5" y="249.5">
+                + get_room_with_device(self, device : Device)
+            </text>
+            <text x="525.5" y="263.5">
+                + get_all_devices_in_room(self, room : Room) : List [Device]
+            </text>
+            <text x="525.5" y="277.5">
+                + turn_on_lights_in_room(self, room : Room)
+            </text>
+            <text x="525.5" y="291.5">
+                + turn_off_lights_in_room(self, room : Room)
+            </text>
+            <text x="525.5" y="305.5">
+                + get_temperature_in_room(self, room : Room) : Optional [float]
+            </text>
+            <text x="525.5" y="319.5">
+                + set_temperature_in_room(self, room : Room, temperature : float)
+            </text>
+        </g>
+        <path d="M 440 566 L 440 551.7 Q 440 540 428.3 540 L 291.7 540 Q 280 540 280 551.7 L 280 566" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 280 566 L 280 646.3 Q 280 658 291.7 658 L 428.3 658 Q 440 658 440 646.3 L 440 566" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 280 566 L 440 566" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" font-weight="bold" pointer-events="none" text-anchor="middle" font-size="12px">
+            <text x="359.5" y="557.5">
+                Sensorer
+            </text>
+        </g>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-284-571-152-84-0)" font-size="12px">
+            <text x="285.5" y="583.5">
+                + Serienummer
+            </text>
+            <text x="285.5" y="597.5">
+                + Enhetstype
+            </text>
+            <text x="285.5" y="611.5">
+                + Device().add_to_list()
+            </text>
+        </g>
+        <path d="M 280 654 L 440 654" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 1200 566 L 1200 551.7 Q 1200 540 1188.3 540 L 1051.7 540 Q 1040 540 1040 551.7 L 1040 566" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 1040 566 L 1040 656.3 Q 1040 668 1051.7 668 L 1188.3 668 Q 1200 668 1200 656.3 L 1200 566" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 1040 566 L 1200 566" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" font-weight="bold" pointer-events="none" text-anchor="middle" font-size="12px">
+            <text x="1119.5" y="557.5">
+                Aktuatorer
+            </text>
+        </g>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-1044-571-152-84-0)" font-size="12px">
+            <text x="1045.5" y="583.5">
+                + Serienummer
+            </text>
+            <text x="1045.5" y="597.5">
+                + Enhetstype
+            </text>
+            <text x="1045.5" y="611.5">
+                + Device().add_to_list()
+            </text>
+        </g>
+        <path d="M 1040 659 L 1200 659" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 921 656 L 921 641.7 Q 921 630 909.3 630 L 771.7 630 Q 760 630 760 641.7 L 760 656" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 760 656 L 760 788.3 Q 760 800 771.7 800 L 909.3 800 Q 921 800 921 788.3 L 921 656" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 760 656 L 921 656" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" font-weight="bold" pointer-events="none" text-anchor="middle" font-size="12px">
+            <text x="840" y="647.5">
+                SmartLys
+            </text>
+        </g>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-764-661-153-94-0)" font-size="12px">
+            <text x="765.5" y="673.5">
+                + Verdi
+            </text>
+            <text x="765.5" y="687.5">
+                + Nr : int
+            </text>
+            <text x="765.5" y="701.5">
+                + typ : str
+            </text>
+            <text x="765.5" y="715.5">
+                + produsent : str
+            </text>
+            <text x="765.5" y="729.5">
+                + pordukt_navn : str
+            </text>
+            <text x="765.5" y="743.5">
+                + serienummer : str
+            </text>
+        </g>
+        <path d="M 760 754 L 921 754" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-764-763-153-42-0)" font-size="12px">
+            <text x="765.5" y="775.5">
+                + OnOFF(state : bool): bool
+            </text>
+            <text x="765.5" y="789.5">
+                + __repr__(self)
+            </text>
+        </g>
+        <path d="M 160 656 L 160 641.7 Q 160 630 148.3 630 L 11.7 630 Q 0 630 0 641.7 L 0 656" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 0 656 L 0 768.3 Q 0 780 11.7 780 L 148.3 780 Q 160 780 160 768.3 L 160 656" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 0 656 L 160 656" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" font-weight="bold" pointer-events="none" text-anchor="middle" font-size="12px">
+            <text x="79.5" y="647.5">
+                Fuktighetssensor
+            </text>
+        </g>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-4-661-152-94-0)" font-size="12px">
+            <text x="5.5" y="673.5">
+                + Verdi
+            </text>
+            <text x="5.5" y="687.5">
+                + Nr : int
+            </text>
+            <text x="5.5" y="701.5">
+                + typ : str
+            </text>
+            <text x="5.5" y="715.5">
+                + produsent : str
+            </text>
+            <text x="5.5" y="729.5">
+                + pordukt_navn : str
+            </text>
+            <text x="5.5" y="743.5">
+                + serienummer : str
+            </text>
+        </g>
+        <path d="M 0 754 L 160 754" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-4-763-152-22-0)" font-size="12px">
+            <text x="5.5" y="775.5">
+                + __repr__(self)
+            </text>
+        </g>
+        <path d="M 1480 886 L 1480 871.7 Q 1480 860 1468.3 860 L 1331.7 860 Q 1320 860 1320 871.7 L 1320 886" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 1320 886 L 1320 1018.3 Q 1320 1030 1331.7 1030 L 1468.3 1030 Q 1480 1030 1480 1018.3 L 1480 886" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 1320 886 L 1480 886" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" font-weight="bold" pointer-events="none" text-anchor="middle" font-size="12px">
+            <text x="1399.5" y="877.5">
+                BilLader
+            </text>
+        </g>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-1324-891-152-94-0)" font-size="12px">
+            <text x="1325.5" y="903.5">
+                + Verdi
+            </text>
+            <text x="1325.5" y="917.5">
+                + Nr : int
+            </text>
+            <text x="1325.5" y="931.5">
+                + typ : str
+            </text>
+            <text x="1325.5" y="945.5">
+                + produsent : str
+            </text>
+            <text x="1325.5" y="959.5">
+                + pordukt_navn : str
+            </text>
+            <text x="1325.5" y="973.5">
+                + serienummer : str
+            </text>
+        </g>
+        <path d="M 1320 984 L 1480 984" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-1324-993-152-42-0)" font-size="12px">
+            <text x="1325.5" y="1005.5">
+                + OnOFF(state : bool): bool
+            </text>
+            <text x="1325.5" y="1019.5">
+                + __repr__(self)
+            </text>
+        </g>
+        <path d="M 920 886 L 920 871.7 Q 920 860 908.3 860 L 771.7 860 Q 760 860 760 871.7 L 760 886" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 760 886 L 760 1018.3 Q 760 1030 771.7 1030 L 908.3 1030 Q 920 1030 920 1018.3 L 920 886" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 760 886 L 920 886" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" font-weight="bold" pointer-events="none" text-anchor="middle" font-size="12px">
+            <text x="839.5" y="877.5">
+                PanelOvn
+            </text>
+        </g>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-764-891-152-94-0)" font-size="12px">
+            <text x="765.5" y="903.5">
+                + Verdi
+            </text>
+            <text x="765.5" y="917.5">
+                + Nr : int
+            </text>
+            <text x="765.5" y="931.5">
+                + typ : str
+            </text>
+            <text x="765.5" y="945.5">
+                + produsent : str
+            </text>
+            <text x="765.5" y="959.5">
+                + pordukt_navn : str
+            </text>
+            <text x="765.5" y="973.5">
+                + serienummer : str
+            </text>
+        </g>
+        <path d="M 760 984 L 920 984" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-764-993-152-42-0)" font-size="12px">
+            <text x="765.5" y="1005.5">
+                + OnOFF(state : bool): bool
+            </text>
+            <text x="765.5" y="1019.5">
+                + __repr__(self)
+            </text>
+        </g>
+        <path d="M 720 656 L 720 641.7 Q 720 630 708.3 630 L 571.7 630 Q 560 630 560 641.7 L 560 656" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 560 656 L 560 772.3 Q 560 784 571.7 784 L 708.3 784 Q 720 784 720 772.3 L 720 656" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 560 656 L 720 656" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" font-weight="bold" pointer-events="none" text-anchor="middle" font-size="12px">
+            <text x="639.5" y="647.5">
+                TemperaturSensor
+            </text>
+        </g>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-564-661-152-94-0)" font-size="12px">
+            <text x="565.5" y="673.5">
+                + Verdi
+            </text>
+            <text x="565.5" y="687.5">
+                + Nr : int
+            </text>
+            <text x="565.5" y="701.5">
+                + typ : str
+            </text>
+            <text x="565.5" y="715.5">
+                + produsent : str
+            </text>
+            <text x="565.5" y="729.5">
+                + pordukt_navn : str
+            </text>
+            <text x="565.5" y="743.5">
+                + serienummer : str
+            </text>
+        </g>
+        <path d="M 560 754 L 720 754" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-564-763-152-26-0)" font-size="12px">
+            <text x="565.5" y="775.5">
+                + __repr__(self)
+            </text>
+        </g>
+        <path d="M 320 826 L 320 811.7 Q 320 800 308.3 800 L 171.7 800 Q 160 800 160 811.7 L 160 826" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 160 826 L 160 940.3 Q 160 952 171.7 952 L 308.3 952 Q 320 952 320 940.3 L 320 826" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 160 826 L 320 826" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" font-weight="bold" pointer-events="none" text-anchor="middle" font-size="12px">
+            <text x="239.5" y="817.5">
+                StrømMåler
+            </text>
+        </g>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-164-831-152-94-0)" font-size="12px">
+            <text x="165.5" y="843.5">
+                + Verdi
+            </text>
+            <text x="165.5" y="857.5">
+                + Nr : int
+            </text>
+            <text x="165.5" y="871.5">
+                + typ : str
+            </text>
+            <text x="165.5" y="885.5">
+                + produsent : str
+            </text>
+            <text x="165.5" y="899.5">
+                + pordukt_navn : str
+            </text>
+            <text x="165.5" y="913.5">
+                + serienummer : str
+            </text>
+        </g>
+        <path d="M 160 924 L 320 924" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-164-933-152-24-0)" font-size="12px">
+            <text x="165.5" y="945.5">
+                + __repr__(self)
+            </text>
+        </g>
+        <path d="M 1300 886 L 1300 871.7 Q 1300 860 1288.3 860 L 1151.7 860 Q 1140 860 1140 871.7 L 1140 886" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 1140 886 L 1140 1018.3 Q 1140 1030 1151.7 1030 L 1288.3 1030 Q 1300 1030 1300 1018.3 L 1300 886" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 1140 886 L 1300 886" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" font-weight="bold" pointer-events="none" text-anchor="middle" font-size="12px">
+            <text x="1219.5" y="877.5">
+                SmartStikkontakt
+            </text>
+        </g>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-1144-891-152-94-0)" font-size="12px">
+            <text x="1145.5" y="903.5">
+                + Verdi
+            </text>
+            <text x="1145.5" y="917.5">
+                + Nr : int
+            </text>
+            <text x="1145.5" y="931.5">
+                + typ : str
+            </text>
+            <text x="1145.5" y="945.5">
+                + produsent : str
+            </text>
+            <text x="1145.5" y="959.5">
+                + pordukt_navn : str
+            </text>
+            <text x="1145.5" y="973.5">
+                + serienummer : str
+            </text>
+        </g>
+        <path d="M 1140 984 L 1300 984" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-1144-993-152-42-0)" font-size="12px">
+            <text x="1145.5" y="1005.5">
+                + OnOFF(state : bool): bool
+            </text>
+            <text x="1145.5" y="1019.5">
+                + __repr__(self)
+            </text>
+        </g>
+        <path d="M 560 826 L 560 811.7 Q 560 800 548.3 800 L 411.7 800 Q 400 800 400 811.7 L 400 826" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 400 826 L 400 942.3 Q 400 954 411.7 954 L 548.3 954 Q 560 954 560 942.3 L 560 826" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 400 826 L 560 826" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" font-weight="bold" pointer-events="none" text-anchor="middle" font-size="12px">
+            <text x="479.5" y="817.5">
+                LuftKvalitetssensor
+            </text>
+        </g>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-404-831-152-94-0)" font-size="12px">
+            <text x="405.5" y="843.5">
+                + Verdi
+            </text>
+            <text x="405.5" y="857.5">
+                + Nr : int
+            </text>
+            <text x="405.5" y="871.5">
+                + typ : str
+            </text>
+            <text x="405.5" y="885.5">
+                + produsent : str
+            </text>
+            <text x="405.5" y="899.5">
+                + pordukt_navn : str
+            </text>
+            <text x="405.5" y="913.5">
+                + serienummer : str
+            </text>
+        </g>
+        <path d="M 400 924 L 560 924" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-404-933-152-26-0)" font-size="12px">
+            <text x="405.5" y="945.5">
+                + __repr__(self)
+            </text>
+        </g>
+        <path d="M 1100 886 L 1100 871.7 Q 1100 860 1088.3 860 L 951.7 860 Q 940 860 940 871.7 L 940 886" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 940 886 L 940 1018.3 Q 940 1030 951.7 1030 L 1088.3 1030 Q 1100 1030 1100 1018.3 L 1100 886" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 940 886 L 1100 886" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" font-weight="bold" pointer-events="none" text-anchor="middle" font-size="12px">
+            <text x="1019.5" y="877.5">
+                GulvvarmePanel
+            </text>
+        </g>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-944-891-152-94-0)" font-size="12px">
+            <text x="945.5" y="903.5">
+                + Verdi
+            </text>
+            <text x="945.5" y="917.5">
+                + Nr : int
+            </text>
+            <text x="945.5" y="931.5">
+                + typ : str
+            </text>
+            <text x="945.5" y="945.5">
+                + produsent : str
+            </text>
+            <text x="945.5" y="959.5">
+                + pordukt_navn : str
+            </text>
+            <text x="945.5" y="973.5">
+                + serienummer : str
+            </text>
+        </g>
+        <path d="M 940 984 L 1100 984" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-944-993-152-42-0)" font-size="12px">
+            <text x="945.5" y="1005.5">
+                + OnOFF(state : bool): bool
+            </text>
+            <text x="945.5" y="1019.5">
+                + __repr__(self)
+            </text>
+        </g>
+        <path d="M 820 430 L 820 415.7 Q 820 404 808.3 404 L 671.7 404 Q 660 404 660 415.7 L 660 430" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 660 430 L 660 452.3 Q 660 464 671.7 464 L 808.3 464 Q 820 464 820 452.3 L 820 430" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 660 430 L 820 430" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" font-weight="bold" pointer-events="none" text-anchor="middle" font-size="12px">
+            <text x="739.5" y="421.5">
+                Device
+            </text>
+        </g>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-664-435-152-34-0)" font-size="12px">
+            <text x="665.5" y="447.5">
+                + add_to_list(self, obj)
+            </text>
+        </g>
+        <path d="M 240 800 L 240 639 Q 240 629 249.38 629 L 258.76 629" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 277.76 629 L 258.76 638.5 L 258.76 619.5 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 480 800 L 480 638.45 Q 480 628.45 470.62 628.47 L 461.24 628.48" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 442.24 628.5 L 461.23 618.98 L 461.25 637.98 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 161.44 665.31 L 222.33 614.41 Q 230 608 240 608 L 258.76 608" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 277.76 608 L 258.76 617.5 L 258.76 598.5 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 560 669 L 497.54 614.57 Q 490 608 480 608 L 461.24 608" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 442.24 608 L 461.24 598.5 L 461.24 617.5 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 840 860 L 840 830.09 Q 840 820.09 850 820.09 L 870 820.09 Q 880 820.09 890 820.09 L 990 820.09 Q 1000 820.09 1000 810.09 L 1000 661.36 Q 1000 651.36 1008.18 651.36 L 1016.36 651.36" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 1035.36 651.35 L 1016.37 660.86 L 1016.36 641.86 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 1400 860 L 1400 830.09 Q 1400 820.09 1390 820.09 L 1370 820.09 Q 1360 820.09 1350 820.09 L 1260 820.09 Q 1250 820.09 1250 810.09 L 1250 660.45 Q 1250 650.45 1240 650.46 L 1221.88 650.48" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 1202.88 650.5 L 1221.87 640.98 L 1221.89 659.98 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 1220 860 L 1168.32 825.55 Q 1160 820 1160 810 L 1160 689.24" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 1160 670.24 L 1169.5 689.24 L 1150.5 689.24 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 920 669 L 982.35 616.44 Q 990 610 1000 610.05 L 1019.24 610.16" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 1038.24 610.26 L 1019.19 619.66 L 1019.3 600.66 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 1320 659 L 1258.19 615.73 Q 1250 610 1240 609.92 L 1221.56 609.78" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 1202.56 609.63 L 1221.63 600.28 L 1221.48 619.28 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 360 540 L 360 497 Q 360 487 370 487 L 580 487 Q 590 487 590 477 L 590 457 Q 590 447 600 447 L 639.03 447" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 658.03 447 L 648.53 452.59 L 639.03 447 L 648.53 441.41 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 1120 540 L 1120 500 Q 1120 490 1110 490 L 1030 490 Q 1020 490 1010 490 L 890 490 Q 880 490 880 480 L 880 457 Q 880 447 870 447 L 841.97 447" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 821.97 447 L 831.97 441.12 L 841.97 447 L 831.97 452.88 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 740 404 L 740 350.24" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="6 6" pointer-events="none"/>
+        <path d="M 740 342.24 L 744 350.24 L 736 350.24 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 400 200 L 509.76 200" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="6 6" pointer-events="none"/>
+        <path d="M 517.76 200 L 509.76 204 L 509.76 196 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 1080 202 L 977.24 202" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 962.24 202 L 977.24 194.5 L 977.24 209.5 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 1020 860 L 1071.68 825.55 Q 1080 820 1080 810 L 1080 689.24" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 1080 670.24 L 1089.5 689.24 L 1070.5 689.24 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 1480 646 L 1480 631.7 Q 1480 620 1468.3 620 L 1331.7 620 Q 1320 620 1320 631.7 L 1320 646" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 1320 646 L 1320 778.3 Q 1320 790 1331.7 790 L 1468.3 790 Q 1480 790 1480 778.3 L 1480 646" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 1320 646 L 1480 646" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" font-weight="bold" pointer-events="none" text-anchor="middle" font-size="12px">
+            <text x="1399.5" y="637.5">
+                VarmePumpe
+            </text>
+        </g>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-1324-651-152-94-0)" font-size="12px">
+            <text x="1325.5" y="663.5">
+                + Verdi
+            </text>
+            <text x="1325.5" y="677.5">
+                + Nr : int
+            </text>
+            <text x="1325.5" y="691.5">
+                + typ : str
+            </text>
+            <text x="1325.5" y="705.5">
+                + produsent : str
+            </text>
+            <text x="1325.5" y="719.5">
+                + pordukt_navn : str
+            </text>
+            <text x="1325.5" y="733.5">
+                + serienummer : str
+            </text>
+        </g>
+        <path d="M 1320 744 L 1480 744" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-1324-753-152-42-0)" font-size="12px">
+            <text x="1325.5" y="765.5">
+                + OnOFF(state : bool): bool
+            </text>
+            <text x="1325.5" y="779.5">
+                + __repr__(self)
+            </text>
+        </g>
+    </g>
+</svg>

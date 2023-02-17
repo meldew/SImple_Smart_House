@@ -4,9 +4,9 @@ from devices import *
 
 def build_demo_house() -> SmartHouse:
     house = SmartHouse()
-    house.register_device(Smartlys(True,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb3"), Room(10,"Room No one"))
-    house.register_device(Smartlys(True,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0"), Room(10,"Room No one"))
-    house.register_device(TemperaturSensor(37.3,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb6"), Room(10,"Room No one"))
+    house.register_device(Smartlys(True,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb3"), Room(10,"idk"))
+    house.register_device(Smartlys(True,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb0"), Room(10,"idk"))
+    house.register_device(TemperaturSensor(37.3,"Moen Inc Prodder","Ute 1.2","e237beec-2675-4cb6"), Room(10,"samme faen"))
     return house
 
 
