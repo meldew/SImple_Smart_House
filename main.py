@@ -4,7 +4,7 @@ from devices import *
 
 def build_demo_house() -> SmartHouse:
     house = SmartHouse()
-    house.register_device(Smartlys(False,"Fritsch Group","Tresom Bright 1.0","f11bb4fc-ba74-49cd"), Room(10,"LivingRoom/Kitchen"))
+    house.register_device(Smartlys(False,"Fritsch Group","Tresom Bright 1.0","f11bb4fc-ba74-49cd"), Room(1,"LivingRoom/Kitchen"))
     house.register_device(Smartlys(False,"Fritsch Group","Alphazap 2","480dbae8-cce7-46d7"), Room(10,"LivingRoom/Kitchen"))
     house.register_device(Fuktighetssensor(68,"Bernhard-Roberts","Andalax","4cb686fe-6448-4cf6"), Room(10,"Bathroom 1"))
     house.register_device(Smartlys(False,"Fritsch Group","Alphazap 2","6a36c71d-4f48-4eb4"), Room(10,"GuestRoom 1"))
