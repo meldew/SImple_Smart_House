@@ -36,7 +36,7 @@ class Fuktighetssensor(Sensorer):
         list_with_sensors.append(self)
 
     def __repr__(self):
-        return f'Sensor ({self.__serienummerInternal}) Type: Fuktighetssensor STATUS: {self.verdi} % PRODUCT DETAILS: {self.produsent} {self.produktnavn}'    
+        return f'Sensor({self.__serienummerInternal}) TYPE: Fuktighetssensor STATUS: {self.verdi} % PRODUCT DETAILS: {self.produsent} {self.produktnavn}'    
 
 
 class TemperaturSensor(Sensorer):
@@ -49,7 +49,7 @@ class TemperaturSensor(Sensorer):
         list_with_sensors.append(self)
 
     def __repr__(self):
-        return f'Sensor ({self.__serienummerInternal}) Type: Temperatursensor STATUS: {self.verdi} °C PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
+        return f'Sensor({self.__serienummerInternal}) TYPE: Temperatursensor STATUS: {self.verdi} °C PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
 
 
 class Strømmåler(Sensorer):
@@ -62,7 +62,7 @@ class Strømmåler(Sensorer):
         list_with_sensors.append(self)
 
     def __repr__(self):
-        return f'Sensor ({self.__serienummerInternal}) Type: Strømmåler STATUS: {self.verdi} mA PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
+        return f'Sensor({self.__serienummerInternal}) TYPE: Strømmåler STATUS: {self.verdi} kWh PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
 
 
 class Luftkvalitet(Sensorer):
@@ -75,7 +75,7 @@ class Luftkvalitet(Sensorer):
         list_with_sensors.append(self)
 
     def __repr__(self):
-        return f'Sensor ({self.__serienummerInternal}) Type: Luftkvalitetssensor STATUS: {self.verdi} g/m^2 PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
+        return f'Sensor({self.__serienummerInternal}) TYPE: Luftkvalitetssensor STATUS: {self.verdi} g/m^2 PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
 
 
 class Varmepumpe(Aktuatorer):
@@ -95,7 +95,7 @@ class Varmepumpe(Aktuatorer):
             return 'OFF'
     
     def __repr__(self):
-        return f'Aktuator ({self.__serienummerInternal}) Type: Varmepumpe STATUS: {self.state} PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
+        return f'Aktuator({self.__serienummerInternal}) TYPE: Varmepumpe STATUS: {self.state} PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
 
 
 class Smartlys(Aktuatorer):
@@ -115,7 +115,7 @@ class Smartlys(Aktuatorer):
             return 'OFF'
     
     def __repr__(self):
-        return f'Aktuator ({self.__serienummerInternal}) Type: Smart Lys STATUS: {self.state} PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
+        return f'Aktuator({self.__serienummerInternal}) TYPE: Smart Lys STATUS: {self.state} PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
 
 
 class Paneloven(Aktuatorer):
@@ -135,7 +135,7 @@ class Paneloven(Aktuatorer):
             return 'OFF'
     
     def __repr__(self):
-        return f'Aktuator ({self.__serienummerInternal}) Type: Paneloven STATUS: {self.state} PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
+        return f'Aktuator({self.__serienummerInternal}) TYPE: Paneloven STATUS: {self.state} PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
 
 
 class Gulvvarmepanel(Aktuatorer):
@@ -155,7 +155,7 @@ class Gulvvarmepanel(Aktuatorer):
             return 'OFF'
     
     def __repr__(self):
-        return f'Aktuator ({self.__serienummerInternal}) Type: Gulvvarmepanel STATUS: {self.state} PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
+        return f'Aktuator({self.__serienummerInternal}) TYPE: Gulvvarmepanel STATUS: {self.state} PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
 
 
 class Smart_Stikkontakt(Aktuatorer):
@@ -175,7 +175,7 @@ class Smart_Stikkontakt(Aktuatorer):
             return 'OFF'
     
     def __repr__(self):
-        return f'Aktuator ({self.__serienummerInternal}) Type: Smart Stikkontakt STATUS: {self.state} PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
+        return f'Aktuator({self.__serienummerInternal}) TYPE: Smart Stikkontakt STATUS: {self.state} PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
 
 class Billader(Aktuatorer):
     def __init__(self,verdi:bool, produsent:str, produktnavn:str, serienummer:str):
@@ -194,4 +194,4 @@ class Billader(Aktuatorer):
             return 'OFF'
     
     def __repr__(self):
-        return f'Aktuator ({self.__serienummerInternal}) Type: Billader STATUS: {self.state} PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
+        return f'Aktuator({self.__serienummerInternal}) TYPE: Billader STATUS: {self.state} PRODUCT DETAILS: {self.produsent} {self.produktnavn}'

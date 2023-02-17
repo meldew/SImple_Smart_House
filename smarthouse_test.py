@@ -13,8 +13,8 @@ class SmartHouseTest(unittest.TestCase):
 
     def test_no_devices(self):
         self.assertEqual(31, SmartHouseTest.house.get_no_of_devices())
-        self.assertEqual(8, SmartHouseTest.house.get_no_of_sensors())
-        self.assertEqual(23, SmartHouseTest.house.get_no_of_actuators())
+        self.assertEqual(9, SmartHouseTest.house.get_no_of_sensors())
+        self.assertEqual(22, SmartHouseTest.house.get_no_of_actuators())
 
     def test_listings(self):
         rooms = SmartHouseTest.house.get_all_rooms()
