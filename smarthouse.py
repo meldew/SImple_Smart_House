@@ -11,7 +11,7 @@ class Room:
     def __init__(self, area: float, name: str = None):
         self.area = area
         self.name = name
-        list_of_devices_in_a_room = []
+        self.list_of_devices_in_a_room = []
         
 
     def __repr__(self):
@@ -49,11 +49,11 @@ class SmartHouse:
             strukturen av huset bygges opp-."""
         newroom = Room(area, name)
         if floor_no == 1:
-            Floor1.rooms.append(newroom)
+            self.floors[0].rooms.append(newroom)
         elif floor_no == 2:
-            Floor2.rooms.append(newroom)
+            self.floors[1].rooms.append(newroom)
         elif floor_no == 3:
-            Floor3.rooms.append(newroom)
+            self.floors[2].append(newroom)
         else:
             return NotImplemented
 
@@ -87,6 +87,7 @@ class SmartHouse:
         return total_area
 
     def register_device(self, device: Device, room: Room):
+        
         pass
 
     def get_no_of_devices(self):        
@@ -99,7 +100,6 @@ class SmartHouse:
         return len(list_with_aktuators)
 
     def move_device(self, device: Device, from_room: Room, to_room: Room): 
-        """Flytter en enhet fra et gitt romm til et annet."""
         return NotImplemented
 
     def find_device_by_serial_no(self, serial_no: str) -> Optional[Device]:
