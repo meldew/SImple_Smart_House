@@ -19,7 +19,7 @@ def build_demo_house() -> SmartHouse:
     Guest3 = house.create_room(2, 10, "Guest Room 3")
     DressRoom = house.create_room(2, 4, "Dressing Room")
     MasterBed = house.create_room(2, 17, "Master Bedroom")
-
+    
     house.register_device(Smartlys(False,"Fritsch Group","Tresom Bright 1.0","f11bb4fc-ba74-49cd"), LivRoom)
     house.register_device(Smartlys(False,"Fritsch Group","Alphazap 2","480dbae8-cce7-46d7"), LivRoom)
     house.register_device(Fuktighetssensor(68,"Bernhard-Roberts","Andalax","4cb686fe-6448-4cf6"), Bath1)
