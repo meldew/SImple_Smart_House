@@ -142,6 +142,7 @@ class SmartHouse:
         """Prøver å sette temperaturen i et gitt rom ved å sette alle aktuatorer
         som kan påvirke temperatur ('Paneloven', 'Varmepumpe', ...) til ønsket
         temperatur."""
+
         for device_obj in room.list_of_devices_in_a_room:
             if type(device_obj) == Varmepumpe:
                 device_obj.temp = temperature
@@ -149,3 +150,4 @@ class SmartHouse:
                 device_obj.temp = temperature
             elif type(device_obj) == Gulvvarmepanel:
                 device_obj.temp = temperature
+
