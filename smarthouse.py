@@ -2,7 +2,6 @@ import devices
 from devices import *
 from typing import List, Optional
 
-
 class Room:
     """Representerer et rom i en etasje i ett hus.
         Et rom har et areal og det kan gis et kort navn.
@@ -13,10 +12,8 @@ class Room:
         self.name = name
         self.list_of_devices_in_a_room = []
         
-
     def __repr__(self):
         return f"{self.name} ({self.area} m^2)"
-
 
 class Floor:
     """Representerer en etasje i ett hus.
