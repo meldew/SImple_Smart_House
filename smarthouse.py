@@ -109,27 +109,45 @@ class SmartHouse:
 
     def get_room_with_device(self, device: Device):
         """Gir tilbake rommet der en gitt enhet er resitrert."""
-        return NotImplemented
+        for floor in self.floors:
+            for room in floor.rooms:
+                for device_obj in room.list_of_devices_in_a_room:
+                    if device_obj == device:
+                        return room
+                    else:
+                        return NotImplemented
 
     def get_all_devices_in_room(self, room: Room) -> List[Device]:
         """Gir tilbake en liste med alle enheter som er registrert på rommet."""
-        return NotImplemented
+        return room.list_of_devices_in_a_room
 
     def turn_on_lights_in_room(self, room: Room):
         """Slår på alle enheter av type 'Smart Lys' i et gitt rom."""
-        return NotImplemented
+        for device_obj in room.list_of_devices_in_a_room:
+            if device_obj == Smartlys:
+                device_obj.verdi = True
 
     def turn_off_lights_in_room(self, room: Room):
         """Slår av alle enheter av type 'Smart Lys' i et gitt rom."""
-        return NotImplemented
+        for device_obj in room.list_of_devices_in_a_room:
+            if device_obj == Smartlys:
+                device_obj.verdi = False
 
     def get_temperature_in_room(self, room: Room) -> Optional[float]:
         """Prøver å finne ut temperaturen i et gitt rom ved å finne
         enheter av type 'Temperatursensor' der og gi tilake verdien som kommatall."""
-        return NotImplemented
+        for device_obj in room.list_of_devices_in_a_room:
+            if device_obj == TemperaturSensor:
+                return device_obj.verdi
 
     def set_temperature_in_room(self, room: Room, temperature: float):
         """Prøver å sette temperaturen i et gitt rom ved å sette alle aktuatorer
         som kan påvirke temperatur ('Paneloven', 'Varmepumpe', ...) til ønsket
         temperatur."""
-        return NotImplemented
+        for device_obj in room.list_of_devices_in_a_room:
+            if device_obj == Varmepumpe:
+                device_obj.temp = temperature
+            elif device_obj == Paneloven:
+                device_obj.temp = temperature
+            elif device_obj == Gulvvarmepanel:
+                device_obj.temp = temperature

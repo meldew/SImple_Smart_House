@@ -85,6 +85,7 @@ class Varmepumpe(Aktuatorer):
         self.produktnavn = produktnavn
         self.verdi = verdi
         self.produsent = produsent
+        self.temp = 0
         list_with_aktuators.append(self)
     
     def __repr__(self):
@@ -111,6 +112,7 @@ class Paneloven(Aktuatorer):
         self.produktnavn = produktnavn
         self.verdi = verdi
         self.produsent = produsent
+        self.temp = 0
         list_with_aktuators.append(self)
 
     def __repr__(self):
@@ -124,6 +126,7 @@ class Gulvvarmepanel(Aktuatorer):
         self.produktnavn = produktnavn
         self.verdi = verdi
         self.produsent = produsent
+        self.temp = 0
         list_with_aktuators.append(self)
 
     def __repr__(self):
