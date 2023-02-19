@@ -1,4 +1,4 @@
-from smarthouse import SmartHouse,Room,Floor
+from smarthouse import SmartHouse
 from devices import *
 
 
