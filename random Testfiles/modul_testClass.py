@@ -1,14 +1,30 @@
-#<Sensor eller Aktuator>(<serienummer) TYPE: <enhetstype> STATUS: <enhetsstatus> PRODUCT DETAILS: <produsent> <produktnavn>
-#-------------------------------------------------------------------------------------------------------------------------
-#Sensor(e237beec-2675-4cb0) TYPE: Temperatursensor STATUS: 3.2 °C PRODUCT DETAILS: Moen Inc Prodder Ute 1.2
-#Aktuator(f11bb4fc-ba74-49cd) TYPE: Smart Lys STATUS: OFF PRODUCT DETAILS: Fritsch Group Tresom Bright 1.0
-#Aktuator(eed2cba8-eb13-4023) TYPE: Varmepumpe STATUS: OFF PRODUCT DETAILS: Osinski Inc Fintone XCX2FF
+
 list_with_devices = []
 list_with_sensors = []
 list_with_aktuators = []
+
+class Room:
+    """Representerer et rom i en etasje i ett hus.
+        Et rom har et areal og det kan gis et kort navn.
+        På et romm kan også registreres smarte enheter."""
+
+    def __init__(self, area: float, name: str = None):
+        self.area = area
+        self.name = name
+
+    def __repr__(self):
+        return f"{self.name} ({self.area} m^2)"
+
+
+
 class Device:
     def add_to_list(self, obj):
         list_with_devices.append(obj)
+
+    def Create_actuator(self):
+        Sensorer() 
+    def Create_(self):
+        Sensorer()            
 
 
 class Sensorer(object):
@@ -31,12 +47,12 @@ class Fuktighetssensor(Sensorer):
         momGay = None
         self.__serienummerInternal = serienummer
         self.produktnavn = produktnavn
-        self.verdi = verdi
+        self.verdi = verdi 
         self.produsent = produsent
         list_with_sensors.append(self)
 
     def __repr__(self):
-        return f'Sensor({self.__serienummerInternal}) TYPE: Fuktighetssensor STATUS: {self.verdi} % PRODUCT DETAILS: {self.produsent} {self.produktnavn}'    
+        return f'Sensor ({self.__serienummerInternal}) Type: Fuktighetssensor STATUS: {self.verdi} % PRODUCT DETAILS: {self.produsent} {self.produktnavn}'    
 
 
 class TemperaturSensor(Sensorer):
@@ -49,7 +65,7 @@ class TemperaturSensor(Sensorer):
         list_with_sensors.append(self)
 
     def __repr__(self):
-        return f'Sensor({self.__serienummerInternal}) TYPE: Temperatursensor STATUS: {self.verdi} °C PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
+        return f'Sensor ({self.__serienummerInternal}) Type: Temperatursensor STATUS: {self.verdi} °C PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
 
 
 class Strømmåler(Sensorer):
@@ -62,7 +78,7 @@ class Strømmåler(Sensorer):
         list_with_sensors.append(self)
 
     def __repr__(self):
-        return f'Sensor({self.__serienummerInternal}) TYPE: Strømmåler STATUS: {self.verdi} kWh PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
+        return f'Sensor ({self.__serienummerInternal}) Type: Strømmåler STATUS: {self.verdi} mA PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
 
 
 class Luftkvalitet(Sensorer):
@@ -75,7 +91,7 @@ class Luftkvalitet(Sensorer):
         list_with_sensors.append(self)
 
     def __repr__(self):
-        return f'Sensor({self.__serienummerInternal}) TYPE: Luftkvalitetssensor STATUS: {self.verdi} g/m^2 PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
+        return f'Sensor ({self.__serienummerInternal}) Type: Luftkvalitetssensor STATUS: {self.verdi} g/m^2 PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
 
 
 class Varmepumpe(Aktuatorer):
@@ -85,11 +101,17 @@ class Varmepumpe(Aktuatorer):
         self.produktnavn = produktnavn
         self.verdi = verdi
         self.produsent = produsent
-        self.temp = 0
+        self.state = Varmepumpe.On_OFF_state(self)
         list_with_aktuators.append(self)
+
+    def On_OFF_state(self) -> str:
+        if self.verdi  == True:
+            return 'ON'
+        else : 
+            return 'OFF'
     
     def __repr__(self):
-        return f'Aktuator({self.__serienummerInternal}) TYPE: Varmepumpe STATUS: {("OFF" if self.verdi == False else "ON") if self.temp == 0 else str(self.temp) + " °C"} PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
+        return f'Aktuator ({self.__serienummerInternal}) Type: Varmepumpe STATUS: {self.state} PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
 
 
 class Smartlys(Aktuatorer):
@@ -102,7 +124,7 @@ class Smartlys(Aktuatorer):
         list_with_aktuators.append(self)
 
     def __repr__(self):
-        return f'Aktuator({self.__serienummerInternal}) TYPE: Smart Lys STATUS: {"OFF" if self.verdi == False else "ON"} PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
+        return f'Aktuator ({self.__serienummerInternal}) Type: Smart Lys STATUS: {"OFF" if self.verdi == False else "ON"} PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
 
 
 class Paneloven(Aktuatorer):
@@ -112,11 +134,17 @@ class Paneloven(Aktuatorer):
         self.produktnavn = produktnavn
         self.verdi = verdi
         self.produsent = produsent
-        self.temp = 0
+        self.state = Paneloven.On_OFF_state(self)
         list_with_aktuators.append(self)
 
+    def On_OFF_state(self) -> str:
+        if self.verdi  == True:
+            return 'ON'
+        else : 
+            return 'OFF'
+    
     def __repr__(self):
-        return f'Aktuator({self.__serienummerInternal}) TYPE: Paneloven STATUS: {"OFF" if self.verdi == False else "ON"} PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
+        return f'Aktuator ({self.__serienummerInternal}) Type: Paneloven STATUS: {self.state} PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
 
 
 class Gulvvarmepanel(Aktuatorer):
@@ -126,11 +154,17 @@ class Gulvvarmepanel(Aktuatorer):
         self.produktnavn = produktnavn
         self.verdi = verdi
         self.produsent = produsent
-        self.temp = 0
+        self.state = Gulvvarmepanel.On_OFF_state(self)
         list_with_aktuators.append(self)
 
+    def On_OFF_state(self) -> str:
+        if self.verdi  == True:
+            return 'ON'
+        else : 
+            return 'OFF'
+    
     def __repr__(self):
-        return f'Aktuator({self.__serienummerInternal}) TYPE: Gulvvarmepanel STATUS: {"OFF" if self.verdi == False else "ON"} PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
+        return f'Aktuator ({self.__serienummerInternal}) Type: Gulvvarmepanel STATUS: {self.state} PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
 
 
 class Smart_Stikkontakt(Aktuatorer):
@@ -140,10 +174,17 @@ class Smart_Stikkontakt(Aktuatorer):
         self.produktnavn = produktnavn
         self.verdi = verdi
         self.produsent = produsent
+        self.state = Smart_Stikkontakt.On_OFF_state(self)
         list_with_aktuators.append(self)
 
+    def On_OFF_state(self) -> str:
+        if self.verdi  == True:
+            return 'ON'
+        else : 
+            return 'OFF'
+    
     def __repr__(self):
-        return f'Aktuator({self.__serienummerInternal}) TYPE: Smart Stikkontakt STATUS: {"OFF" if self.verdi == False else "ON"} PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
+        return f'Aktuator ({self.__serienummerInternal}) Type: Smart Stikkontakt STATUS: {self.state} PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
 
 class Billader(Aktuatorer):
     def __init__(self,verdi:bool, produsent:str, produktnavn:str, serienummer:str):
@@ -152,7 +193,23 @@ class Billader(Aktuatorer):
         self.produktnavn = produktnavn
         self.verdi = verdi
         self.produsent = produsent
+        self.state = Billader.On_OFF_state(self)
         list_with_aktuators.append(self)
 
+    def On_OFF_state(self) -> str:
+        if self.verdi  == True:
+            return 'ON'
+        else : 
+            return 'OFF'
+    
     def __repr__(self):
-        return f'Aktuator({self.__serienummerInternal}) TYPE: Billader STATUS: {"OFF" if self.verdi == False else "ON"} PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
+        return f'Aktuator ({self.__serienummerInternal}) Type: Billader STATUS: {self.state} PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
+
+
+
+
+
+
+
+
+

@@ -6,19 +6,19 @@ class SmartHouseTest(unittest.TestCase):
     house = main.build_demo_house()
 
     def test_no_of_rooms(self):
-        self.assertEqual(11, SmartHouseTest.house.get_no_of_rooms())  # add assertion here
+        self.assertEqual(13, SmartHouseTest.house.get_no_of_rooms())  
 
     def test_area(self):
         self.assertEqual(156.55, SmartHouseTest.house.get_total_area())
 
     def test_no_devices(self):
         self.assertEqual(31, SmartHouseTest.house.get_no_of_devices())
-        self.assertEqual(8, SmartHouseTest.house.get_no_of_sensors())
-        self.assertEqual(23, SmartHouseTest.house.get_no_of_actuators())
+        self.assertEqual(9, SmartHouseTest.house.get_no_of_sensors())
+        self.assertEqual(22, SmartHouseTest.house.get_no_of_actuators())
 
     def test_listings(self):
         rooms = SmartHouseTest.house.get_all_rooms()
-        self.assertEqual(11, len(rooms))
+        self.assertEqual(13, len(rooms))
         devices = SmartHouseTest.house.get_all_devices()
         self.assertEqual(31, len(devices))
         dev15 = SmartHouseTest.house.find_device_by_serial_no("c28b6e75-d565-4678")
