@@ -86,9 +86,8 @@ class SmartHouse:
                 total_area = total_area + room.area
         return total_area
 
-    def register_device(self, device: Device, room: Room):
-        
-        pass
+    def register_device(self, device: Device, room: Room):       
+        room.list_of_devices_in_a_room.append(device)   
 
     def get_no_of_devices(self):        
         return len(list_with_devices)
@@ -100,7 +99,8 @@ class SmartHouse:
         return len(list_with_aktuators)
 
     def move_device(self, device: Device, from_room: Room, to_room: Room): 
-        return NotImplemented
+        from_room.list_of_devices_in_a_room.remove(device)
+        to_room.list_of_devices_in_a_room.append(device)
 
     def find_device_by_serial_no(self, serial_no: str) -> Optional[Device]:
         for device in list_with_devices:
