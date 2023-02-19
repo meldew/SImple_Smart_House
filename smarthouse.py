@@ -1,4 +1,5 @@
-from devices import * 
+import devices
+from devices import *
 from typing import List, Optional
 
 
@@ -37,29 +38,53 @@ class SmartHouse:
         """Legger til en etasje og gi den tilbake som objekt.
             Denne metoden ble kalt i initialiseringsfasen når
             strukturen av huset bygges opp-."""
-        return NotImplemented
+        floornum = len(self.floors) + 1
+        newfloor = Floor(floornum)
+        self.floors.append(newfloor)
+        return newfloor
 
     def create_room(self, floor_no: int, area: float, name: str = None) -> Room:
         """Legger til et rom i en etasje og gi den tilbake som objekt.
             Denne metoden ble kalt i initialiseringsfasen når
             strukturen av huset bygges opp-."""
-        return NotImplemented
+        newroom = Room(area, name)
+        if floor_no == 1:
+            Floor1.rooms.append(newroom)
+        elif floor_no == 2:
+            Floor2.rooms.append(newroom)
+        elif floor_no == 3:
+            Floor3.rooms.append(newroom)
+        else:
+            return NotImplemented
+
+        return newroom
 
     def get_no_of_rooms(self) -> int:
         """Gir tilbake antall rom i huset som heltall"""
-        return NotImplemented
+        no_of_rooms = 0
+        for floor in self.floors:
+            no_of_rooms = no_of_rooms + len(floor.rooms)
+        return no_of_rooms
 
     def get_all_devices(self) -> List[Device]:
         """Gir tilbake en liste med alle enheter som er registrert i huset."""
-        return NotImplemented
+        return devices.list_with_devices
 
     def get_all_rooms(self) -> List[Room]:
         """Gir tilbake en liste med alle rom i huset."""
-        return NotImplemented
+        roomlist = []
+        for floor in self.floors:
+            for room in floor.rooms:
+                roomlist.append(room)
+        return roomlist
 
     def get_total_area(self) -> float:
         """Regner ut det totale arealet av huset."""
-        return NotImplemented
+        total_area = 0
+        for floor in self.floors:
+            for room in floor.rooms:
+                total_area = total_area + room.area
+        return total_area
 
     def register_device(self, device: Device, room: Room):
         pass
