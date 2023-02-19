@@ -89,7 +89,7 @@ class Varmepumpe(Aktuatorer):
         list_with_aktuators.append(self)
     
     def __repr__(self):
-        return f'Aktuator({self.__serienummerInternal}) TYPE: Varmepumpe STATUS: {"OFF" if self.verdi == False else "ON"} PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
+        return f'Aktuator({self.__serienummerInternal}) TYPE: Varmepumpe STATUS: {("OFF" if self.verdi == False else "ON") if self.temp == 0 else str(self.temp) + " °C"} PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
 
 
 class Smartlys(Aktuatorer):

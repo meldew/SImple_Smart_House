@@ -114,8 +114,6 @@ class SmartHouse:
                 for device_obj in room.list_of_devices_in_a_room:
                     if device_obj == device:
                         return room
-                    else:
-                        return NotImplemented
 
     def get_all_devices_in_room(self, room: Room) -> List[Device]:
         """Gir tilbake en liste med alle enheter som er registrert på rommet."""
@@ -124,20 +122,20 @@ class SmartHouse:
     def turn_on_lights_in_room(self, room: Room):
         """Slår på alle enheter av type 'Smart Lys' i et gitt rom."""
         for device_obj in room.list_of_devices_in_a_room:
-            if device_obj == Smartlys:
+            if type(device_obj) == Smartlys:
                 device_obj.verdi = True
 
     def turn_off_lights_in_room(self, room: Room):
         """Slår av alle enheter av type 'Smart Lys' i et gitt rom."""
         for device_obj in room.list_of_devices_in_a_room:
-            if device_obj == Smartlys:
+            if type(device_obj) == Smartlys:
                 device_obj.verdi = False
 
     def get_temperature_in_room(self, room: Room) -> Optional[float]:
         """Prøver å finne ut temperaturen i et gitt rom ved å finne
         enheter av type 'Temperatursensor' der og gi tilake verdien som kommatall."""
         for device_obj in room.list_of_devices_in_a_room:
-            if device_obj == TemperaturSensor:
+            if type(device_obj) == TemperaturSensor:
                 return device_obj.verdi
 
     def set_temperature_in_room(self, room: Room, temperature: float):
@@ -145,9 +143,9 @@ class SmartHouse:
         som kan påvirke temperatur ('Paneloven', 'Varmepumpe', ...) til ønsket
         temperatur."""
         for device_obj in room.list_of_devices_in_a_room:
-            if device_obj == Varmepumpe:
+            if type(device_obj) == Varmepumpe:
                 device_obj.temp = temperature
-            elif device_obj == Paneloven:
+            elif type(device_obj) == Paneloven:
                 device_obj.temp = temperature
-            elif device_obj == Gulvvarmepanel:
+            elif type(device_obj) == Gulvvarmepanel:
                 device_obj.temp = temperature

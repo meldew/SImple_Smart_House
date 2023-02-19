@@ -50,8 +50,7 @@ def build_demo_house() -> SmartHouse:
     house.register_device(TemperaturSensor(16.1,"Moen Inc","Prodder Inne 2.3","481e94bd-ff50-40ea"), MasterBed)
     house.register_device(Smartlys(False,"Fritsch Group","Tresom Bright 1.0","233064d7-028a-407f"), MasterBed)
     house.register_device(Smartlys(False,"Fritsch Group","Alphazap 2","89393440-43cb-4cb5"), DressRoom)
-    house.register_device(Paneloven(False,"Hauck-DuBuque","Otcom 2","be490f21-b9cf-4413"), Guest3)
-    print(TemperaturSensor)
+    house.register_device(Paneloven(False,"Hauck-DuBuque","Otcom 2","be490f21-b9cf-4413"), Guest3)      
     return house
 
 
