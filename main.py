@@ -1,5 +1,6 @@
 from smarthouse import SmartHouse
 from devices import *
+from persistence import SmartHousePersistence
 
 
 def build_demo_house() -> SmartHouse:
@@ -52,6 +53,11 @@ def build_demo_house() -> SmartHouse:
     house.register_device(Smartlys(False,"Fritsch Group","Alphazap 2","89393440-43cb-4cb5"), DressRoom)
     house.register_device(Paneloven(False,"Hauck-DuBuque","Otcom 2","be490f21-b9cf-4413"), Guest3)      
     return house
+
+def load_demo_house(persistence: SmartHousePersistence) -> SmartHouse:
+    result = SmartHouse()
+    # TODO read rooms, devices and their locations from the database
+    return result
 
 
 def do_device_list(smart_house: SmartHouse):
