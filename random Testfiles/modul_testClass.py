@@ -59,6 +59,7 @@ class TemperaturSensor(Sensorer):
     def __init__(self,verdi:float, produsent:str, produktnavn:str, serienummer:str):
         super().__init__(serienummer, "Temperatursensor")
         self.__serienummerInternal = serienummer
+        self.hovedType = "Sensor"
         self.produktnavn = produktnavn
         self.verdi = verdi
         self.produsent = produsent
@@ -206,10 +207,15 @@ class Billader(Aktuatorer):
         return f'Aktuator ({self.__serienummerInternal}) Type: Billader STATUS: {self.state} PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
 
 
+test = TemperaturSensor(1.3,"Moen Inc","Prodder Ute 1.2","e237beec-2675-4cb0")
 
 
 
 
+def bla (sensor: Device):
+    me = sensor.hovedType
+    return me
 
+print(bla(test))
 
 

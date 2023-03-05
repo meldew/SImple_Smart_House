@@ -26,6 +26,7 @@ class Fuktighetssensor(Sensorer):
     def __init__(self,verdi:float, produsent:str, produktnavn:str, serienummer:str):
         super().__init__(serienummer, "Fuktighetssensor")
         momGay = None
+        self.hovedType = "Sensor"
         self.__serienummerInternal = serienummer
         self.produktnavn = produktnavn
         self.verdi = verdi
@@ -38,6 +39,7 @@ class Fuktighetssensor(Sensorer):
 class TemperaturSensor(Sensorer):
     def __init__(self,verdi:float, produsent:str, produktnavn:str, serienummer:str):
         super().__init__(serienummer, "Temperatursensor")
+        self.hovedType = "Sensor"
         self.__serienummerInternal = serienummer
         self.produktnavn = produktnavn
         self.verdi = verdi
@@ -50,6 +52,7 @@ class TemperaturSensor(Sensorer):
 class Strømmåler(Sensorer):
     def __init__(self,verdi:float, produsent:str, produktnavn:str, serienummer:str):
         super().__init__(serienummer, "Strømmåler")
+        self.hovedType = "Sensor"
         self.__serienummerInternal = serienummer
         self.produktnavn = produktnavn
         self.verdi = verdi
@@ -62,6 +65,7 @@ class Strømmåler(Sensorer):
 class Luftkvalitet(Sensorer):
     def __init__(self,verdi:float, produsent:str, produktnavn:str, serienummer:str):
         super().__init__(serienummer, "Luftkvalitetssensor")
+        self.hovedType = "Sensor"
         self.__serienummerInternal = serienummer
         self.produktnavn = produktnavn
         self.verdi = verdi
@@ -74,6 +78,7 @@ class Luftkvalitet(Sensorer):
 class Varmepumpe(Aktuatorer):
     def __init__(self,verdi:bool, produsent:str, produktnavn:str, serienummer:str):
         super().__init__(serienummer, "Varmepumpe")
+        self.hovedType = "Aktuator"
         self.__serienummerInternal = serienummer
         self.produktnavn = produktnavn
         self.verdi = verdi
@@ -87,6 +92,7 @@ class Varmepumpe(Aktuatorer):
 class Smartlys(Aktuatorer):
     def __init__(self,verdi:bool, produsent:str, produktnavn:str, serienummer:str):
         super().__init__(serienummer, "Smart Lys")
+        self.hovedType = "Aktuator"
         self.__serienummerInternal = serienummer
         self.produktnavn = produktnavn
         self.verdi = verdi
@@ -99,6 +105,7 @@ class Smartlys(Aktuatorer):
 class Paneloven(Aktuatorer):
     def __init__(self,verdi:bool, produsent:str, produktnavn:str, serienummer:str):
         super().__init__(serienummer, "Paneloven")
+        self.hovedType = "Aktuator"
         self.__serienummerInternal = serienummer
         self.produktnavn = produktnavn
         self.verdi = verdi
@@ -112,6 +119,7 @@ class Paneloven(Aktuatorer):
 class Gulvvarmepanel(Aktuatorer):
     def __init__(self,verdi:bool, produsent:str, produktnavn:str, serienummer:str):
         super().__init__(serienummer, "Gulvvarmepanel")
+        self.hovedType = "Aktuator"
         self.__serienummerInternal = serienummer
         self.produktnavn = produktnavn
         self.verdi = verdi
@@ -125,6 +133,7 @@ class Gulvvarmepanel(Aktuatorer):
 class Smart_Stikkontakt(Aktuatorer):
     def __init__(self,verdi:bool, produsent:str, produktnavn:str, serienummer:str):
         super().__init__(serienummer, "Smart Stikkontakt")
+        self.hovedType = "Aktuator"
         self.__serienummerInternal = serienummer
         self.produktnavn = produktnavn
         self.verdi = verdi
@@ -137,6 +146,7 @@ class Smart_Stikkontakt(Aktuatorer):
 class Billader(Aktuatorer):
     def __init__(self,verdi:bool, produsent:str, produktnavn:str, serienummer:str):
         super().__init__(serienummer, "Billader")
+        self.hovedType = "Aktuator"
         self.__serienummerInternal = serienummer
         self.produktnavn = produktnavn
         self.verdi = verdi
