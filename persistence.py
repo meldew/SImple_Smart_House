@@ -40,7 +40,7 @@ class SmartHouseAnalytics:
 
     def get_most_recent_sensor_reading(self, sensor: Device) -> Optional[float]:
         if sensor.hovedType == "Sensor":
-            self.persistence.cursor.execute("SELECT value FROM measurements WHERE device = 3 ORDER BY time_stamp DESC LIMIT 1;")
+            self.persistence.cursor.execute("SELECT value FROM measurements WHERE device ="+ str(sensor.device_id) +"ORDER BY time_stamp DESC LIMIT 1;")
             results = self.persistence.cursor.fetchall()
             for result in results:
                 value = result
