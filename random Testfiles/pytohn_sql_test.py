@@ -10,35 +10,9 @@ cursor = conn.cursor()
 # for result in results:
 #     room_name = result
 
-# print(room_name[0])
-
-
-
 cursor.execute("SELECT value FROM measurements WHERE device = 3 ORDER BY time_stamp DESC LIMIT 1;")
 results = cursor.fetchall()
 for result in results:
     test = result
 print(test)
 
-# -- SELECT device, AVG(value) AS avg_temp
-# -- FROM measurements
-# -- WHERE device IN (8, 12 ,28)
-# -- GROUP BY device
-# -- ORDER BY avg_temp ASC
-# -- LIMIT 1;
-
-
-
-# SELECT value
-# FROM measurements
-# WHERE device = 3
-# ORDER BY time_stamp DESC
-# LIMIT 1;
-
-# SELECT name 
-# FROM rooms 
-# WHERE id = (
-#     SELECT room 
-#     FROM devices 
-#     WHERE id = 8
-# );
