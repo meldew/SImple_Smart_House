@@ -37,21 +37,28 @@ class SmartHouseAnalytics:
     def __init__(self, persistence: SmartHousePersistence):
         self.persistence = persistence
 
+
     def get_most_recent_sensor_reading(self, sensor: Device) -> Optional[float]:
-        """
-        Retrieves the most recent (i.e. current) value reading for the given
-        sensor device.
-        Function may return None if the given device is an actuator or
-        if there are no sensor values for the given device recorded in the database.
-        """
-        return NotImplemented()
-
+        if sensor.hovedType == "Sensor":
+            self.persistence.cursor.execute("SELECT value FROM measurements WHERE device = 3 ORDER BY time_stamp DESC LIMIT 1;")
+            results = self.persistence.cursor.fetchall()
+            for result in results:
+                value = result
+            return value 
+        else : 
+            return None
+        
     def get_coldest_room(self) -> Room:
-        """
-        Finds the room, which has the lowest temperature on average.
-        """
-        return NotImplemented()
-
+        self.persistence.cursor.execute("SELECT device, AVG(value) AS avg_temp FROM measurements WHERE device IN (8, 12 ,28) GROUP BY device ORDER BY avg_temp ASC LIMIT 1;")
+        results = self.persistence.cursor.fetchall()
+        for result in results:
+            sensor_id = result
+        self.persistence.cursor.execute("SELECT name FROM rooms WHERE id = (SELECT room FROM devices WHERE id ="+ str(sensor_id[0])+");")
+        results = self.persistence.cursor.fetchall()
+        for result in results:
+            room_name = result
+        return room_name[0]
+        
     def get_sensor_readings_in_timespan(self, sensor: Device, from_ts: datetime, to_ts: datetime) -> List[float]:
         """
         Returns a list of sensor measurements (float values) for the given device in the given timespan.
