@@ -41,11 +41,11 @@ class SmartHouse:
         self.floors.append(newfloor)
         return newfloor
 
-    def create_room(self, floor_no: int, area: float, name: str = None) -> Room:
+    def create_room(self, room_id: int, floor_no: int, area: float, name: str = None) -> Room:
         """Legger til et rom i en etasje og gi den tilbake som objekt.
             Denne metoden ble kalt i initialiseringsfasen når
             strukturen av huset bygges opp-."""
-        newroom = Room(area, name)
+        newroom = Room(area, name, room_id)
         if floor_no == 1:
             self.floors[0].rooms.append(newroom)
         elif floor_no == 2:

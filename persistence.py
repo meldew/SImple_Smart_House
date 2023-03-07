@@ -3,7 +3,7 @@ from devices import Device
 from smarthouse import Room
 from typing import Optional, List, Dict, Tuple
 from datetime import date, datetime
-import pandas as pd
+
 
 
 class SmartHousePersistence:
@@ -64,6 +64,7 @@ class SmartHouseAnalytics:
         """
         Returns a list of sensor measurements (float values) for the given device in the given timespan.
         """
+
         return NotImplemented()
 
     def describe_temperature_in_rooms(self) -> Dict[str, Tuple[float, float, float]]:

@@ -1,8 +1,9 @@
 from smarthouse import SmartHouse
 from devices import *
 from persistence import SmartHousePersistence
+from sqlite3 import Connection
 
-
+"""
 def build_demo_house() -> SmartHouse:
     house = SmartHouse()
     Floor1 = house.create_floor()
@@ -53,11 +54,119 @@ def build_demo_house() -> SmartHouse:
     house.register_device(Smartlys(False,"Fritsch Group","Alphazap 2","89393440-43cb-4cb5",30), DressRoom)
     house.register_device(Paneloven(False,"Hauck-DuBuque","Otcom 2","be490f21-b9cf-4413",31), Guest3)      
     return house
-
+"""
 def load_demo_house(persistence: SmartHousePersistence) -> SmartHouse:
-    result = SmartHouse()
-    # TODO read rooms, devices and their locations from the database
-    return result
+    persist = SmartHousePersistence(db_file="db.sqlite")
+    house = SmartHouse()
+    Floor1 = house.create_floor()
+    Floor2 = house.create_floor()
+
+    persist.cursor.execute("Select * from rooms;")
+    rows = persist.cursor.fetchall()
+    for row in rows:
+        house.create_room(row[1], row[2], row[3], row[0])
+
+    persist.cursor.execute("Select * from devices WHERE type = 'Smart Lys';")
+    rows = persist.cursor.fetchall()
+    for row in rows:
+        id = int(row[0])
+        producer = str(row[3])
+        name = str(row[4])
+        serial = str(row[5])
+        room = row[1]
+        house.register_device(Smartlys(producer, name, serial, id), room)
+
+    persist.cursor.execute("Select * from devices WHERE type = 'Smart Stikkontakt';")
+    rows = persist.cursor.fetchall()
+    for row in rows:
+        id = int(row[0])
+        producer = str(row[3])
+        name = str(row[4])
+        serial = str(row[5])
+        room = row[1]
+        house.register_device(Smart_Stikkontakt(producer, name, serial, id), room)
+
+    persist.cursor.execute("Select * from devices WHERE type = 'Strømmåler';")
+    rows = persist.cursor.fetchall()
+    for row in rows:
+        id = int(row[0])
+        producer = str(row[3])
+        name = str(row[4])
+        serial = str(row[5])
+        room = row[1]
+        house.register_device(Strømmåler(producer, name, serial, id), room)
+
+    persist.cursor.execute("Select * from devices WHERE type = 'Temperatursensor';")
+    rows = persist.cursor.fetchall()
+    for row in rows:
+        id = int(row[0])
+        producer = str(row[3])
+        name = str(row[4])
+        serial = str(row[5])
+        room = row[1]
+        house.register_device(TemperaturSensor(producer, name, serial, id), room)
+
+    persist.cursor.execute("Select * from devices WHERE type = 'Varmepumpe';")
+    rows = persist.cursor.fetchall()
+    for row in rows:
+        id = int(row[0])
+        producer = str(row[3])
+        name = str(row[4])
+        serial = str(row[5])
+        room = row[1]
+        house.register_device(Varmepumpe(producer, name, serial, id), room)
+
+    persist.cursor.execute("Select * from devices WHERE type = 'Paneloven';")
+    rows = persist.cursor.fetchall()
+    for row in rows:
+        id = int(row[0])
+        producer = str(row[3])
+        name = str(row[4])
+        serial = str(row[5])
+        room = row[1]
+        house.register_device(Paneloven(producer, name, serial, id), room)
+
+    persist.cursor.execute("Select * from devices WHERE type = 'Luftkvalitetssensor';")
+    rows = persist.cursor.fetchall()
+    for row in rows:
+        id = int(row[0])
+        producer = str(row[3])
+        name = str(row[4])
+        serial = str(row[5])
+        room = row[1]
+        house.register_device(Luftkvalitet(producer, name, serial, id), room)
+
+    persist.cursor.execute("Select * from devices WHERE type = 'Gulvvarmepanel';")
+    rows = persist.cursor.fetchall()
+    for row in rows:
+        id = int(row[0])
+        producer = str(row[3])
+        name = str(row[4])
+        serial = str(row[5])
+        room = row[1]
+        house.register_device(Gulvvarmepanel(producer, name, serial, id), room)
+
+    persist.cursor.execute("Select * from devices WHERE type = 'Fuktighetssensor';")
+    rows = persist.cursor.fetchall()
+    for row in rows:
+        id = int(row[0])
+        producer = str(row[3])
+        name = str(row[4])
+        serial = str(row[5])
+        room = row[1]
+        house.register_device(Fuktighetssensor(producer, name, serial, id), room)
+
+    persist.cursor.execute("Select * from devices WHERE type = 'Billader';")
+    rows = persist.cursor.fetchall()
+    for row in rows:
+        id = int(row[0])
+        producer = str(row[3])
+        name = str(row[4])
+        serial = str(row[5])
+        room = row[1]
+        house.register_device(Billader(producer, name, serial, id), room)
+    "Mangler luftavfukter"
+    return house
 
 
 def do_device_list(smart_house: SmartHouse):
@@ -149,5 +258,6 @@ def main(smart_house: SmartHouse):
 
 
 if __name__ == '__main__':
-    house = build_demo_house()
+    house = load_demo_house(SmartHousePersistence(db_file="db.sqlite"))
+
     main(house)
