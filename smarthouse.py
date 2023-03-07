@@ -7,7 +7,8 @@ class Room:
         Et rom har et areal og det kan gis et kort navn.
         På et romm kan også registreres smarte enheter."""
 
-    def __init__(self, area: float, name: str = None):
+    def __init__(self, area: float, name: str = None, room_id: int = None):
+        self.room_id = room_id
         self.area = area
         self.name = name
         self.list_of_devices_in_a_room = []
