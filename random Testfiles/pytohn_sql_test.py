@@ -17,15 +17,13 @@ def test():
     for result in results:
         device_8.append(result[0])
     s1 = pd.Series(device_8)
-    print(s1.describe())
-
+   
     device_12 = []
     cursor.execute("SELECT value from measurements WHERE device = 12")
     results = cursor.fetchall()
     for result in results:
         device_12.append(result[0])
     s2 = pd.Series(device_8)
-    print(s2.describe())
 
     device_28 = []
     cursor.execute("SELECT value from measurements WHERE device = 28")
@@ -33,11 +31,10 @@ def test():
     for result in results:
         device_28.append(result[0])
     s3 = pd.Series(device_8)
-    print(s3.describe())
-
+   
     dictionary = {
         "Room1": [s1.describe()[3], s1.describe()[7], s1.describe()[1]],
-        "Room1": [s2.describe()[3], s2.describe()[7], s2.describe()[1]],
-        "Room1": [s3.describe()[3], s3.describe()[7], s3.describe()[1]]
+        "Room2": [s2.describe()[3], s2.describe()[7], s2.describe()[1]],
+        "Room3": [s3.describe()[3], s3.describe()[7], s3.describe()[1]]
     }
     return dictionary
