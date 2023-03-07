@@ -160,3 +160,17 @@ class Billader(Aktuatorer):
 
     def __repr__(self):
         return f'Aktuator({self.__serienummerInternal}) TYPE: Billader STATUS: {"OFF" if self.verdi == False else "ON"} PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
+
+class Luftavfukter(Aktuatorer):
+    def __init__(self,verdi:bool, produsent:str, produktnavn:str, serienummer:str,device_id:int):
+        super().__init__(serienummer, "Smart Stikkontakt")
+        self.device_id = device_id
+        self.hovedType = "Aktuator"
+        self.__serienummerInternal = serienummer
+        self.produktnavn = produktnavn
+        self.verdi = verdi
+        self.produsent = produsent
+        list_with_aktuators.append(self)
+
+    def __repr__(self):
+        return f'Aktuator({self.__serienummerInternal}) TYPE: Luftavfukter STATUS: {"OFF" if self.verdi == False else "ON"} PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
