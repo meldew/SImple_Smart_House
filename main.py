@@ -64,7 +64,6 @@ def load_demo_house(persistence: SmartHousePersistence) -> SmartHouse:
     persist.cursor.execute("Select * from rooms;")
     rows = persist.cursor.fetchall()
     for row in rows:
-        #globals()[f'obj{i}'] = MyClass(i)
         house.create_room(row[0], row[1], row[2], row[3])
 
     persist.cursor.execute("Select * from devices WHERE type = 'Smart Lys';")
@@ -189,7 +188,7 @@ def load_demo_house(persistence: SmartHousePersistence) -> SmartHouse:
         roomid = row[1] - 1
         room = roomlist[roomid]
         house.register_device(Luftavfukter(False, producer, name, serial, id), room)
-    "Mangler luftavfukter"
+
     return house
 
 
