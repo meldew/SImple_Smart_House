@@ -1,4 +1,4 @@
-from smarthouse import SmartHouse
+from smarthouse import SmartHouse, Room, Floor
 from devices import *
 from persistence import SmartHousePersistence
 from sqlite3 import Connection
@@ -73,8 +73,9 @@ def load_demo_house(persistence: SmartHousePersistence) -> SmartHouse:
         producer = str(row[3])
         name = str(row[4])
         serial = str(row[5])
-        room = row[1]
-        house.register_device(Smartlys(producer, name, serial, id), room)
+        roomid = row[1]
+        room = Floor1.rooms[roomid]
+        house.register_device(Smartlys(False, producer, name, serial, id), room)
 
     persist.cursor.execute("Select * from devices WHERE type = 'Smart Stikkontakt';")
     rows = persist.cursor.fetchall()
@@ -84,7 +85,7 @@ def load_demo_house(persistence: SmartHousePersistence) -> SmartHouse:
         name = str(row[4])
         serial = str(row[5])
         room = row[1]
-        house.register_device(Smart_Stikkontakt(producer, name, serial, id), room)
+        house.register_device(Smart_Stikkontakt(False, producer, name, serial, id), room)
 
     persist.cursor.execute("Select * from devices WHERE type = 'Strømmåler';")
     rows = persist.cursor.fetchall()
@@ -94,7 +95,7 @@ def load_demo_house(persistence: SmartHousePersistence) -> SmartHouse:
         name = str(row[4])
         serial = str(row[5])
         room = row[1]
-        house.register_device(Strømmåler(producer, name, serial, id), room)
+        house.register_device(Strømmåler(0, producer, name, serial, id), room)
 
     persist.cursor.execute("Select * from devices WHERE type = 'Temperatursensor';")
     rows = persist.cursor.fetchall()
@@ -104,7 +105,7 @@ def load_demo_house(persistence: SmartHousePersistence) -> SmartHouse:
         name = str(row[4])
         serial = str(row[5])
         room = row[1]
-        house.register_device(TemperaturSensor(producer, name, serial, id), room)
+        house.register_device(TemperaturSensor(0, producer, name, serial, id), room)
 
     persist.cursor.execute("Select * from devices WHERE type = 'Varmepumpe';")
     rows = persist.cursor.fetchall()
@@ -114,7 +115,7 @@ def load_demo_house(persistence: SmartHousePersistence) -> SmartHouse:
         name = str(row[4])
         serial = str(row[5])
         room = row[1]
-        house.register_device(Varmepumpe(producer, name, serial, id), room)
+        house.register_device(Varmepumpe(False, producer, name, serial, id), room)
 
     persist.cursor.execute("Select * from devices WHERE type = 'Paneloven';")
     rows = persist.cursor.fetchall()
@@ -124,7 +125,7 @@ def load_demo_house(persistence: SmartHousePersistence) -> SmartHouse:
         name = str(row[4])
         serial = str(row[5])
         room = row[1]
-        house.register_device(Paneloven(producer, name, serial, id), room)
+        house.register_device(Paneloven(False, producer, name, serial, id), room)
 
     persist.cursor.execute("Select * from devices WHERE type = 'Luftkvalitetssensor';")
     rows = persist.cursor.fetchall()
@@ -134,7 +135,7 @@ def load_demo_house(persistence: SmartHousePersistence) -> SmartHouse:
         name = str(row[4])
         serial = str(row[5])
         room = row[1]
-        house.register_device(Luftkvalitet(producer, name, serial, id), room)
+        house.register_device(Luftkvalitet(0, producer, name, serial, id), room)
 
     persist.cursor.execute("Select * from devices WHERE type = 'Gulvvarmepanel';")
     rows = persist.cursor.fetchall()
@@ -144,7 +145,7 @@ def load_demo_house(persistence: SmartHousePersistence) -> SmartHouse:
         name = str(row[4])
         serial = str(row[5])
         room = row[1]
-        house.register_device(Gulvvarmepanel(producer, name, serial, id), room)
+        house.register_device(Gulvvarmepanel(False, producer, name, serial, id), room)
 
     persist.cursor.execute("Select * from devices WHERE type = 'Fuktighetssensor';")
     rows = persist.cursor.fetchall()
@@ -154,7 +155,7 @@ def load_demo_house(persistence: SmartHousePersistence) -> SmartHouse:
         name = str(row[4])
         serial = str(row[5])
         room = row[1]
-        house.register_device(Fuktighetssensor(producer, name, serial, id), room)
+        house.register_device(Fuktighetssensor(0, producer, name, serial, id), room)
 
     persist.cursor.execute("Select * from devices WHERE type = 'Billader';")
     rows = persist.cursor.fetchall()
@@ -164,7 +165,7 @@ def load_demo_house(persistence: SmartHousePersistence) -> SmartHouse:
         name = str(row[4])
         serial = str(row[5])
         room = row[1]
-        house.register_device(Billader(producer, name, serial, id), room)
+        house.register_device(Billader(False, producer, name, serial, id), room)
     "Mangler luftavfukter"
     return house
 

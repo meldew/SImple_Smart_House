@@ -84,8 +84,9 @@ class SmartHouse:
                 total_area = total_area + room.area
         return total_area
 
-    def register_device(self, device: Device, room: Room):       
-        room.list_of_devices_in_a_room.append(device)   
+    def register_device(self, device: Device, room: Room):
+
+        room.list_of_devices_in_a_room.append(device)
 
     def get_no_of_devices(self):        
         return len(list_with_devices)
