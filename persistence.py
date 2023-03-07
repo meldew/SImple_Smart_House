@@ -3,6 +3,7 @@ from devices import Device
 from smarthouse import Room
 from typing import Optional, List, Dict, Tuple
 from datetime import date, datetime
+import pandas as pd
 
 
 class SmartHousePersistence:
@@ -66,17 +67,38 @@ class SmartHouseAnalytics:
         return NotImplemented()
 
     def describe_temperature_in_rooms(self) -> Dict[str, Tuple[float, float, float]]:
-        """
-        Returns a dictionary where the key are room names and the values are triples
-        containing three floating point numbers:
-        - The first component [index=0] being the _minimum_ temperature of the room.
-        - The second component [index=1] being the _maximum_ temperature of the room.
-        - The third component [index=2] being the _average_ temperature of the room.
-        This function can be seen as a simplified version of the DataFrame.describe()
-        function that exists in Pandas:
-        https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.describe.html?highlight=describe
-        """
-        return NotImplemented()
+        list_device8 = []
+        self.persistence.cursor.execute("SELECT value FROM measurements m WHERE device = 8")
+        results = self.persistence.cursor.fetchall()
+        for result in results:
+            list_device8.append(result[0])
+        s8 = pd.Series(list_device8)
+        s8.describe()
+
+        list_device12 = []
+        self.persistence.cursor.execute("SELECT value FROM measurements m WHERE device = 12")
+        results = self.persistence.cursor.fetchall()
+        for result in results:
+            list_device12.append(result[0])
+        s12 = pd.Series(list_device12)
+        s12.describe()
+
+        list_device28 = []
+        self.persistence.cursor.execute("SELECT value FROM measurements m WHERE device = 28")
+        results = self.persistence.cursor.fetchall()
+        for result in results:
+            list_device28.append(result[0])
+        s28 = pd.Series(list_device28)
+        s28.describe()
+
+        dict_devices = {
+            "Room 8": [s8.describe()[3], s8.describe()[7], s8.describe()[1]],
+            "Room 12": [s12.describe()[3], s12.describe()[7], s12.describe()[1]],
+            "Room 24": [s28.describe()[3], s28.describe()[7], s28.describe()[1]]
+        }
+
+        return dict_devices
+
 
     def get_hours_when_humidity_above_average(self, room: Room, day: date) -> List[int]:
         """
@@ -85,4 +107,6 @@ class SmartHouseAnalytics:
         the average recorded humidity in that room at that particular time.
         The result is a (possibly empty) list of number respresenting hours [0-23].
         """
+
+
         return NotImplemented()
