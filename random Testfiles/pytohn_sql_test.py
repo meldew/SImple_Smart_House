@@ -1,3 +1,4 @@
+import pandas as pd
 from sqlite3 import Connection
 conn = Connection("db.sqlite")
 cursor = conn.cursor()
@@ -10,9 +11,11 @@ cursor = conn.cursor()
 # for result in results:
 #     room_name = result
 
-cursor.execute("SELECT value FROM measurements WHERE device = 3 ORDER BY time_stamp DESC LIMIT 1;")
+list_with_values = []
+cursor.execute("SELECT value from measurements WHERE device = 8")
 results = cursor.fetchall()
 for result in results:
-    test = result
-print(test)
+    list_with_values.append(result[0])
 
+s = pd.Series(list_with_values)
+print(s.describe())
