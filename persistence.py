@@ -67,37 +67,20 @@ class SmartHouseAnalytics:
         return NotImplemented()
 
     def describe_temperature_in_rooms(self) -> Dict[str, Tuple[float, float, float]]:
-        list_device8 = []
-        self.persistence.cursor.execute("SELECT value FROM measurements m WHERE device = 8")
+        list_with_values = []
+        self.persistence.cursor.execute("MIN(Value), MAX(Value), AVG(Value) from measurements "
+                                        "WHERE device = 8 OR device = 12 OR device = 28"
+                                        "GROUP by device")
         results = self.persistence.cursor.fetchall()
         for result in results:
-            list_device8.append(result[0])
-        s8 = pd.Series(list_device8)
-        s8.describe()
-
-        list_device12 = []
-        self.persistence.cursor.execute("SELECT value FROM measurements m WHERE device = 12")
-        results = self.persistence.cursor.fetchall()
-        for result in results:
-            list_device12.append(result[0])
-        s12 = pd.Series(list_device12)
-        s12.describe()
-
-        list_device28 = []
-        self.persistence.cursor.execute("SELECT value FROM measurements m WHERE device = 28")
-        results = self.persistence.cursor.fetchall()
-        for result in results:
-            list_device28.append(result[0])
-        s28 = pd.Series(list_device28)
-        s28.describe()
-
-        dict_devices = {
-            "Room 8": [s8.describe()[3], s8.describe()[7], s8.describe()[1]],
-            "Room 12": [s12.describe()[3], s12.describe()[7], s12.describe()[1]],
-            "Room 24": [s28.describe()[3], s28.describe()[7], s28.describe()[1]]
+            for value in results:
+                list_with_values.append(value)
+        dictionary_with_room_temp = {
+            "Living Room / Kitchen": (list_with_values[3], list_with_values[4], list_with_values[5]),
+            "Entrance": (list_with_values[0], list_with_values[1], list_with_values[2]),
+            "Master Bedroom": (list_with_values[6], list_with_values[7], list_with_values[8])
         }
-
-        return dict_devices
+        return dictionary_with_room_temp
 
 
     def get_hours_when_humidity_above_average(self, room: Room, day: date) -> List[int]:
