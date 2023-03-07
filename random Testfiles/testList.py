@@ -1,3 +1,5 @@
+import pandas as pd
+
 # liste = []
 # caller_list = []
 
@@ -19,8 +21,12 @@
 
 # print(liste)
 
+
+s = pd.Series([1, 2, 3])
+print(s.describe()[1])
+
 dictionary = {
-    "Room1": [20.5, 30.5, 25.5],
+    "Room1": [s.describe()[3], s.describe()[7], s.describe()[1]],
     "Room2": [20.5, 30.5, 25.6],
 }
 
