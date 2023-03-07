@@ -119,25 +119,25 @@ class SmartHouse:
 
     def turn_on_lights_in_room(self, room: Room):
         """Slår på alle enheter av type 'Smart Lys' i et gitt rom."""
-        # for device_obj in room.list_of_devices_in_a_room:
-        #     if type(device_obj) == Smartlys:
-        #         device_obj.verdi = True
-        pass
+        for device_obj in room.list_of_devices_in_a_room:
+            if type(device_obj) == Smartlys:
+                device_obj.verdi = True
+       
 
     def turn_off_lights_in_room(self, room: Room):
         """Slår av alle enheter av type 'Smart Lys' i et gitt rom."""
-        # for device_obj in room.list_of_devices_in_a_room:
-        #     if type(device_obj) == Smartlys:
-        #         device_obj.verdi = False
-        pass
+        for device_obj in room.list_of_devices_in_a_room:
+            if type(device_obj) == Smartlys:
+                device_obj.verdi = False
+        
 
     def get_temperature_in_room(self, room: Room) -> Optional[float]:
         """Prøver å finne ut temperaturen i et gitt rom ved å finne
         enheter av type 'Temperatursensor' der og gi tilake verdien som kommatall."""
-        # for device_obj in room.list_of_devices_in_a_room:
-        #     if type(device_obj) == TemperaturSensor:
-        #         return device_obj.verdi
-        pass
+        for device_obj in room.list_of_devices_in_a_room:
+            if type(device_obj) == TemperaturSensor:
+                return device_obj.verdi
+        
 
     def set_temperature_in_room(self, room: Room, temperature: float):
         """Prøver å sette temperaturen i et gitt rom ved å sette alle aktuatorer
