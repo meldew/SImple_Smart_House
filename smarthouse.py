@@ -46,6 +46,7 @@ class SmartHouse:
             Denne metoden ble kalt i initialiseringsfasen når
             strukturen av huset bygges opp-."""
         newroom = Room(area, name, room_id)
+        globals()[f'Rom{room_id}'] = newroom
         if floor_no == 1:
             self.floors[0].rooms.append(newroom)
         elif floor_no == 2:
