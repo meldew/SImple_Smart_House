@@ -37,7 +37,7 @@ class PersistenceTest(unittest.TestCase):
         PersistenceTest.p.save()
         PersistenceTest.p.reconnect()
         house_loaded = load_demo_house(PersistenceTest.p)
-        bedroom = house_loaded.get_room_with_device(house_loaded.find_device_by_serial_no("627ff5f3-f4f5-47bd"))
+        bedroom =  PersistenceTest.house.get_room_with_device(house_loaded.find_device_by_serial_no("627ff5f3-f4f5-47bd"))
         self.assertEqual(
             "Aktuator(627ff5f3-f4f5-47bd) TYPE: Smart Lys STATUS: OFF PRODUCT DETAILS: Fritsch Group Alphazap 2",
             house_loaded.find_device_by_serial_no("627ff5f3-f4f5-47bd").__str__())
