@@ -5,8 +5,6 @@ from typing import Optional, List, Dict, Tuple
 from datetime import date, datetime
 
 
-
-
 class SmartHousePersistence:
 
     def __init__(self, db_file: str):
