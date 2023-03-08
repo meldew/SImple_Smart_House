@@ -100,9 +100,15 @@ class SmartHouseAnalytics:
         the average recorded humidity in that room at that particular time.
         The result is a (possibly empty) list of number respresenting hours [0-23].
         """
+        newdate = day
+        timedate = newdate.strftime("%Y-%m-%d")
+        self.persistence.cursor.execute("Select avg(value) "
+                                        "FROM measurements "
+                                        "WHERE device = 3 "
+                                        "AND time_stamp LIKE '" + timedate + "%';")
+        avgpre = self.persistence.cursor.fetchone()
+        avghum = avgpre[0]
 
-        self.persistence.cursor.execute("Select avg(value) from measurements where device = 3 OR device = 21;")
-        Avghum = int(self.persistence.cursor.fetchone()[0])
         listofhours = []
         hours = ['T00', 'T01', 'T02', 'T03', 'T04', 'T05', 'T06', 'T07', 'T08', 'T09', 'T10', 'T11', 'T12', 'T13',
                  'T14', 'T15', 'T16', 'T18', 'T19', 'T20', 'T21', 'T22', 'T23']
@@ -111,12 +117,12 @@ class SmartHouseAnalytics:
             self.persistence.cursor.execute("SELECT * "
                                             "FROM measurements "
                                             "WHERE time_stamp "
-                                            "LIKE '%" + hour +
-                                            "%' AND device = 21 "
-                                            "AND value > " + str(58.55) + ";")
+                                            "LIKE '%" + hour + "%' "
+                                            "AND time_stamp LIKE '" + timedate + "%' " 
+                                            "AND device = 3 "
+                                            "AND value > " + str(avghum) + ";")
             measurelist = self.persistence.cursor.fetchall()
-            if len(measurelist) >= 3:
-                newhour = i
-                listofhours.append(newhour)
+            if len(measurelist) > 3:
+                listofhours.append(i)
             i = i+1
         return listofhours

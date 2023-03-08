@@ -1,4 +1,4 @@
-import pandas as pd
+from datetime import date
 
 # liste = []
 # caller_list = []
@@ -21,7 +21,7 @@ import pandas as pd
 
 # print(liste)
 
-
+"""
 s = pd.Series([1, 2, 3])
 print(s.describe()[1])
 
@@ -31,3 +31,7 @@ dictionary = {
 }
 
 print(dictionary["Room1"][2])
+"""
+day = date(year=2023, month=2, day=13)
+newdate = day.strftime("%Y-%m-%d")
+print(newdate)
