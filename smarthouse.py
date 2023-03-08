@@ -121,6 +121,7 @@ class SmartHouse:
 
     def turn_on_lights_in_room(self, room: Room):
         """Slår på alle enheter av type 'Smart Lys' i et gitt rom."""
+
         for device_obj in room.list_of_devices_in_a_room:
             if type(device_obj) == Smartlys:
                 device_obj.verdi = True

@@ -66,16 +66,16 @@ def load_demo_house(persistence: SmartHousePersistence) -> SmartHouse:
     for row in rows:
         house.create_room(row[0], row[1], row[2], row[3])
 
+    roomlist = house.get_all_rooms()
+
     persist.cursor.execute("Select * from devices WHERE type = 'Smart Lys';")
     rows = persist.cursor.fetchall()
-    roomlist = house.get_all_rooms()
-    print(roomlist)
     for row in rows:
         id = int(row[0])
         producer = str(row[3])
         name = str(row[4])
         serial = str(row[5])
-        roomid = row[1] - 1 #I db begynner lista på 1, men roomlist begynner på 0
+        roomid = row[1] - 1  #I db begynner lista på 1, men roomlist begynner på 0
         room = roomlist[roomid]
         house.register_device(Smartlys(False, producer, name, serial, id), room)
 
