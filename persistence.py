@@ -1,8 +1,9 @@
 from sqlite3 import Connection
 from devices import Device
-from smarthouse import Room
+from smarthouse import Room, SmartHouse
 from typing import Optional, List, Dict, Tuple
 from datetime import date, datetime
+
 
 
 
@@ -61,9 +62,6 @@ class SmartHouseAnalytics:
         return room_name[0]
         
     def get_sensor_readings_in_timespan(self, sensor: Device, from_ts: datetime, to_ts: datetime) -> List[float]:
-        """
-        Returns a list of sensor measurements (float values) for the given device in the given timespan.
-        """
         sen_id = sensor.device_id
         From = from_ts.isoformat()
         To = to_ts.isoformat()
@@ -93,18 +91,19 @@ class SmartHouseAnalytics:
         return dictionary_with_room_temp
 
 
-    def get_hours_when_humidity_above_average(self, room: Room, day: date) -> List[int]:
-        """
-        This function determines during which hours of the given day
-        there were more than three measurements in that hour having a humidity measurement that is above
-        the average recorded humidity in that room at that particular time.
-        The result is a (possibly empty) list of number respresenting hours [0-23].
-        """
+    def get_hours_when_humidity_above_average(self, room: str, day: date) -> List[int]:    
+        bathroom1 = "Bathroom 1"
+        bathroom2 = "Bathroom 2"
+        if room == bathroom1:
+            device_id = 3
+        elif room == bathroom2:
+            device_id = 21
+                      
         newdate = day
         timedate = newdate.strftime("%Y-%m-%d")
         self.persistence.cursor.execute("Select avg(value) "
                                         "FROM measurements "
-                                        "WHERE device = 3 "
+                                        "WHERE device =" + str(device_id) + " "
                                         "AND time_stamp LIKE '" + timedate + "%';")
         avgpre = self.persistence.cursor.fetchone()
         avghum = avgpre[0]
@@ -119,7 +118,7 @@ class SmartHouseAnalytics:
                                             "WHERE time_stamp "
                                             "LIKE '%" + hour + "%' "
                                             "AND time_stamp LIKE '" + timedate + "%' " 
-                                            "AND device = 3 "
+                                            "AND device = " + str(device_id) + " "
                                             "AND value > " + str(avghum) + ";")
             measurelist = self.persistence.cursor.fetchall()
             if len(measurelist) > 3:

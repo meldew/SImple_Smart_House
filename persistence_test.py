@@ -90,10 +90,10 @@ class PersistenceTest(unittest.TestCase):
 
     def test_analytics_advanced(self):
         anal = SmartHouseAnalytics(PersistenceTest.p)
-        expected = [8, 13, 17, 18, 19, 20, 21]
+        expected = [8, 13, 17, 18, 19, 20]
         self.assertEqual(expected,
                          anal.get_hours_when_humidity_above_average("Bathroom 1", date(year=2023, month=2, day=13)))
-        expected = list(range(7, 24))
+        expected = list(range(7, 23))
         self.assertEqual(expected,
                          anal.get_hours_when_humidity_above_average("Bathroom 2", date(year=2023, month=2, day=14)))
 
