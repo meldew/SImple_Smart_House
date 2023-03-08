@@ -1,3 +1,8 @@
+#<Sensor eller Aktuator>(<serienummer) TYPE: <enhetstype> STATUS: <enhetsstatus> PRODUCT DETAILS: <produsent> <produktnavn>
+#-------------------------------------------------------------------------------------------------------------------------
+#Sensor(e237beec-2675-4cb0) TYPE: Temperatursensor STATUS: 3.2 °C PRODUCT DETAILS: Moen Inc Prodder Ute 1.2
+#Aktuator(f11bb4fc-ba74-49cd) TYPE: Smart Lys STATUS: OFF PRODUCT DETAILS: Fritsch Group Tresom Bright 1.0
+#Aktuator(eed2cba8-eb13-4023) TYPE: Varmepumpe STATUS: OFF PRODUCT DETAILS: Osinski Inc Fintone XCX2FF
 list_with_devices = []
 list_with_sensors = []
 list_with_aktuators = []
@@ -160,17 +165,3 @@ class Billader(Aktuatorer):
 
     def __repr__(self):
         return f'Aktuator({self.__serienummerInternal}) TYPE: Billader STATUS: {"OFF" if self.verdi == False else "ON"} PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
-
-class Luftavfukter(Aktuatorer):
-    def __init__(self,verdi:bool, produsent:str, produktnavn:str, serienummer:str,device_id:int):
-        super().__init__(serienummer, "Smart Stikkontakt")
-        self.device_id = device_id
-        self.hovedType = "Aktuator"
-        self.__serienummerInternal = serienummer
-        self.produktnavn = produktnavn
-        self.verdi = verdi
-        self.produsent = produsent
-        list_with_aktuators.append(self)
-
-    def __repr__(self):
-        return f'Aktuator({self.__serienummerInternal}) TYPE: Luftavfukter STATUS: {"OFF" if self.verdi == False else "ON"} PRODUCT DETAILS: {self.produsent} {self.produktnavn}'
