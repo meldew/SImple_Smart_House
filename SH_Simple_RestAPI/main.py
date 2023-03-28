@@ -32,37 +32,35 @@ async def root():
 
 @app.get("/smarthouse/")
 async def GetSmarthouse():
-    # Informasjon om smarthuset
-    # TODO Legg inn funksjon
-    return NotImplemented
+    return json.dumps(str(smart_house))
 
 
 @app.get("/smarthouse/floor")
 async def GetSmarthousefloor():
-    # Informasjon om alle etasjer
-    # TODO Legg inn funksjon
-    return NotImplemented
+    return json.dumps(str(smart_house.floors))
 
 
 @app.get("/smarthouse/floor/{fid}")
-async def GetSmarthousefloorid():
-    # Informasjon om spesifikk etasje
-    # TODO Legg inn funksjon
-    return NotImplemented
+async def GetSmarthousefloorid(fid: int):
+    for floor in smart_house.floors:
+        if floor.fid == fid:
+            return json.dumps(str(floor))
 
 
 @app.get("/smarthouse/floor/{fid}/room")
-async def GetSmarthouserooms():
-    # Informasjon om alle rom i en etasje
-    # TODO Legg inn funksjon
-    return NotImplemented
+async def GetSmarthouserooms(fid: int):
+    for floor in smart_house.floors:
+        if floor.fid == fid:
+            return json.dumps(str(floor.rooms))
 
 
 @app.get("/smarthouse/floor/{fid}/room/{rid}")
-async def GetSmarthouseroom():
-    # Informasjon om ett rom i en etasje
-    # TODO Legg inn funksjon
-    return NotImplemented
+async def GetSmarthouseroom(rid: int, fid: int):
+    for floor in smart_house.floors:
+        if floor.fid == fid:
+            for room in floor.rooms:
+                if room.rid == rid:
+                    return json.dumps(str(room))
 
 
 @app.get("/smarthouse/device")
@@ -70,7 +68,7 @@ async def Get_all_devices():
     list_with_all_devices = []
     for floor in smart_house.floors:
         for room in floor.rooms:
-            list_with_all_devices.append(room.devices) 
+            list_with_all_devices.append(room.devices)
     return json.dumps(str(list_with_all_devices))
 
 
@@ -89,7 +87,7 @@ async def GetSmarthouseDeviceStatus(did : int, response: Response):
         for room in floor.rooms:
             for device in room.devices:
                 if device.did == did and device.is_sensor():
-                    return json.dumps(str(device.get_current_value())) 
+                    return json.dumps(str(device.get_current_value()))
 
 
 @app.post("/smarthouse/sensor/{did}/current")
@@ -99,7 +97,7 @@ async def PostSmartHouseSensorCurrent(did : int):
         for room in floor.rooms:
             for device in room.devices:
                 if device.did == did and device.is_sensor():
-                    return json.dumps(str(device.set_current_value(value)))   
+                    return json.dumps(str(device.set_current_value(value)))
 
 
 @app.get("/smarthouse/sensor/{did}/values")
