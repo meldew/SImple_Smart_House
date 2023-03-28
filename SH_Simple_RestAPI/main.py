@@ -26,95 +26,95 @@ app.mount("/welcome", StaticFiles(directory="static"), name="static")
 
 # http://localhost:8000/
 @app.get("/")
-def root():
+async def root():
     return {"message": "Welcome to SmartHouse Cloud REST API - Powered by FastAPI"}
 
 @app.get("/smarthouse/")
-def GetSmarthouse():
+async def GetSmarthouse():
     # Informasjon om smarthuset
     # TODO Legg inn funksjon
     return NotImplemented
 
 
 @app.get("/smarthouse/floor")
-def GetSmarthousefloor():
+async def GetSmarthousefloor():
     # Informasjon om alle etasjer
     # TODO Legg inn funksjon
     return NotImplemented
 
 
 @app.get("/smarthouse/floor/{fid}")
-def GetSmarthousefloorid():
+async def GetSmarthousefloorid():
     # Informasjon om spesifikk etasje
     # TODO Legg inn funksjon
     return NotImplemented
 
 
 @app.get("/smarthouse/floor/{fid}/room")
-def GetSmarthouserooms():
+async def GetSmarthouserooms():
     # Informasjon om alle rom i en etasje
     # TODO Legg inn funksjon
     return NotImplemented
 
 
 @app.get("/smarthouse/floor/{fid}/room/{rid}")
-def GetSmarthouseroom():
+async def GetSmarthouseroom():
     # Informasjon om ett rom i en etasje
     # TODO Legg inn funksjon
     return NotImplemented
 
 
 @app.get("/smarthouse/device")
-def GetSmarthouseDevices():
+async def GetSmarthouseDevices():
     # Informasjon om alle enheter
     # TODO Legg inn funksjon
     return NotImplemented
 
 
 @app.get("/smarthouse/device/{did}")
-def GetSmarthouseDeviceID():
+async def GetSmarthouseDeviceID():
     # Informasjon om spesifikk enhet
     # TODO Legg inn funksjon
     return NotImplemented
 
 
 @app.get("/smarthouse/sensor/{did}/current")
-def GetSmarthouseDeviceStatus():
+async def GetSmarthouseDeviceStatus():
     # Status på sensor (avgitt måleverdi)
     # TODO Legg inn funksjon
     return NotImplemented
 
 
 @app.post("/smarthouse/sensor/{did}/current")
-def PostSmartHouseSensorCurrent():
+async def PostSmartHouseSensorCurrent():
     # Legg til måling for spesifisert enhet
     # TODO Legg inn funksjon
     return NotImplemented
 
 
 @app.get("/smarthouse/sensor/{did}/values?limit=n")
-def Getlatestmeasurement():
+async def Getlatestmeasurement():
     # Siste måling(er) for spesifikk sensor - antall målinger returnert gitt av "n"
     # TODO Legg inn funksjon
     return NotImplemented
 
 
 @app.delete("/smarthouse/sensor/{did}/oldest")
-def Deleteoldestmeasurement():
+async def Deleteoldestmeasurement():
     # Slett eldste måling fra gitt sensor
     # TODO Legg inn funksjon
     return NotImplemented
 
 
 @app.get("/smarthouse/actuator/{did}/current")
-def Getactuatorstatus():
+async def Getactuatorstatus():
     # Hent status på aktuator
     # TODO Legg inn funksjon
     return NotImplemented
 
 
 @app.put("/smarthouse/device/{did}")
-def Updateactuator():
+async def Updateactuator():
     # Oppdater status på aktuator
     # TODO Legg inn funksjon
     return NotImplemented
