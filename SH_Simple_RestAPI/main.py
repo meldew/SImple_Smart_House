@@ -100,33 +100,93 @@ async def PostSmartHouseSensorCurrent(did : int):
                     return json.dumps(str(device.set_current_value(device.get_current_value())))   
 
 
-@app.get("/smarthouse/sensor/{did}/values?limit=n")
-async def Getlatestmeasurement():
+@app.get("/smarthouse/sensor/{did}/values")
+async def Getlatestmeasurements(did : int, limit: int):
     # Siste måling(er) for spesifikk sensor - antall målinger returnert gitt av "n"
-    # TODO Legg inn funksjon
-    return NotImplemented
+    # TODO Sjekk om endringer er nødvendig
+    if 1 <= did <= 31:
+        for floor in smart_house.floors:
+            for room in floor.rooms:
+                for device in room.devices:
+                    if device.did == did and device.is_sensor():
+                        if type(device) == TemperatureSensor:
+                            result = device.temperature[-limit:]
+                            return json.dumps(result)
+                        elif type(device) == HumiditySensor:
+                            result = device.humidity[-limit:]
+                            return json.dumps(result)
+                        elif type(device) == SmartMeter:
+                            result = device.energy_consumption[-limit:]
+                            return json.dumps(result)
+                        elif type(device) == AirQualitySensor:
+                            result = device.air_quality[-limit:]
+                            return json.dumps(result)
+                        else:
+                            return json.dumps("Invalid sensor type")
+                    elif device.did == did and device.is_actuator():
+                        return json.dumps("Device is not a sensor.")
+    else:
+        return json.dumps("Invalid device ID")
+
 
 
 @app.delete("/smarthouse/sensor/{did}/oldest")
-async def Deleteoldestmeasurement():
+async def Deleteoldestmeasurement(did : int):
     # Slett eldste måling fra gitt sensor
-    # TODO Legg inn funksjon
-    return NotImplemented
+    # TODO sjekk om endringer er nødvendig
+    if 1 <= did <= 31:
+        for floor in smart_house.floors:
+            for room in floor.rooms:
+                for device in room.devices:
+                    if device.did == did and device.is_sensor():
+                        device.delete_oldest_value()
+                        return json.dumps("Oldest measurement deleted for device " + str(device.did))
+                    elif device.did == did and device.is_actuator():
+                        return json.dumps("Device is not a sensor.")
+    else:
+        return json.dumps("Invalid device ID")
+
 
 
 @app.get("/smarthouse/actuator/{did}/current")
-async def Getactuatorstatus():
+async def Getactuatorstatus(did : int):
+    # TODO sjekk om endringer er nødvendig
     # Hent status på aktuator
-    # TODO Legg inn funksjon
-    return NotImplemented
+    if 1 <= did <= 31:
+        for floor in smart_house.floors:
+            for room in floor.rooms:
+                for device in room.devices:
+                    if device.did == did and device.is_actuator():
+                        return json.dumps(str(device.get_current_state()))
+                    elif device.did == did and device.is_sensor():
+                        return json.dumps("Device is not an actuator.")
+    else:
+        return json.dumps("Invalid device ID")
 
 
 @app.put("/smarthouse/device/{did}")
-async def Updateactuator():
+async def Updateactuator(did : int):
     # Oppdater status på aktuator
-    # TODO Legg inn funksjon
-    return NotImplemented
-
+    # TODO sjekk om endringer er nødvendig
+    if 1 <= did <= 31:
+        for floor in smart_house.floors:
+            for room in floor.rooms:
+                for device in room.devices:
+                    if device.did == did and device.is_actuator():
+                        if type(device.get_current_state()) == bool:
+                            if device.get_current_state() == True:
+                                device.set_current_state(False)
+                                return json.dumps("New state: " + str(device.get_current_state()))
+                            elif device.get_current_state() == False:
+                                device.set_current_state(True)
+                                return json.dumps("New state: " + str(device.get_current_state()))
+                        elif type(device.get_current_state()) == float:
+                            device.set_current_state("20")
+                            return json.dumps("Actuator updated. New value: " + str(device.get_current_state()))
+                    elif device.did == did and device.is_sensor():
+                        return json.dumps("Device is not an actuator.")
+    else:
+        return json.dumps("Invalid device ID")
 
 
 if __name__ == '__main__':
