@@ -65,31 +65,39 @@ async def GetSmarthouseroom():
 
 
 @app.get("/smarthouse/device")
-async def GetSmarthouseDevices():
-    # Informasjon om alle enheter
-    # TODO Legg inn funksjon
-    return NotImplemented
+async def Get_all_devices():
+    list_with_all_devices = []
+    for floor in smart_house.floors:
+        for room in floor.rooms:
+            list_with_all_devices.append(room.devices) 
+    return json.dumps(str(list_with_all_devices))
 
 
 @app.get("/smarthouse/device/{did}")
-async def GetSmarthouseDeviceID():
-    # Informasjon om spesifikk enhet
-    # TODO Legg inn funksjon
-    return NotImplemented
+async def GetSmarthouseDeviceID(did : int, response: Response):
+    for floor in smart_house.floors:
+        for room in floor.rooms:
+            for device in room.devices:
+                if device.did == did:
+                    return json.dumps(str(device))
 
 
 @app.get("/smarthouse/sensor/{did}/current")
-async def GetSmarthouseDeviceStatus():
-    # Status på sensor (avgitt måleverdi)
-    # TODO Legg inn funksjon
-    return NotImplemented
+async def GetSmarthouseDeviceStatus(did : int, response: Response):
+    for floor in smart_house.floors:
+        for room in floor.rooms:
+            for device in room.devices:
+                if device.did == did and device.is_sensor():
+                    return json.dumps(str(device.get_current_value())) 
 
 
 @app.post("/smarthouse/sensor/{did}/current")
-async def PostSmartHouseSensorCurrent():
-    # Legg til måling for spesifisert enhet
-    # TODO Legg inn funksjon
-    return NotImplemented
+async def PostSmartHouseSensorCurrent(did : int):
+    for floor in smart_house.floors:
+        for room in floor.rooms:
+            for device in room.devices:
+                if device.did == did and device.is_sensor():
+                    return json.dumps(str(device.set_current_value(device.get_current_value())))   
 
 
 @app.get("/smarthouse/sensor/{did}/values?limit=n")

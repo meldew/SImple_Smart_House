@@ -1,0 +1,85 @@
+{
+    "info": {
+		"_postman_id": "3b3ba94c-5a33-472a-9252-ff7db5f923c5",
+		"name": "ING301 - Bikecomputer RestAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4079450"
+	},
+    "item": [
+        {
+			"name": "GET root",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000",
+					"host": [
+						"localhost"
+					],
+					"port": "8000"
+				}
+			},
+			"response": []
+		},
+        {
+			"name": "GET all devices",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/smarthouse/device",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"smarthouse",
+						"device"
+					]
+				}
+			},
+			"response": []
+		},
+        {
+			"name": "GET device by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/smarthouse/device/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"smarthouse",
+						"device",
+                        "3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET current value from device by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/smarthouse/sensor/3/current",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"smarthouse",
+						"device",
+                        "3",
+						"current"
+					]
+				}
+			},
+			"response": []
+		}
+    ]
+}
