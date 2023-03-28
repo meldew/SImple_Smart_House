@@ -1,0 +1,430 @@
+{
+	"info": {
+		"_postman_id": "1876745c-0edf-46ca-9378-a243d6008076",
+		"name": "ING301 - Bikecomputer RestAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26482665"
+	},
+	"item": [
+		{
+			"name": "GET root",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000",
+					"host": [
+						"localhost"
+					],
+					"port": "8000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET all devices",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/smarthouse/device",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"smarthouse",
+						"device"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET device by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/smarthouse/device/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"smarthouse",
+						"device",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET current value from device by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/smarthouse/sensor/3/current",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"smarthouse",
+						"sensor",
+						"3",
+						"current"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST current sensor value to SmartHouse",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"value\": 18 }"
+				},
+				"url": {
+					"raw": "localhost:8000/smarthouse/sensor/123/current",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"smarthouse",
+						"sensor",
+						"123",
+						"current"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actuator status by device id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/smarthouse/actuator/12/current",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"smarthouse",
+						"actuator",
+						"12",
+						"current"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update actuator status by device id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/smarthouse/device/9",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"smarthouse",
+						"device",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete oldest measurement from device by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/smarthouse/sensor/3/oldest",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"smarthouse",
+						"sensor",
+						"3",
+						"oldest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get latest measurements from device by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/smarthouse/sensor/3/values?limit=5",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"smarthouse",
+						"sensor",
+						"3",
+						"values"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all info from Smart House",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/smarthouse/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"smarthouse",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all info from Smart House",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/smarthouse/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"smarthouse",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get info on all roms in smart house",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/smarthouse/floor",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"smarthouse",
+						"floor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get smart house floor id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/smarthouse/floor/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"smarthouse",
+						"floor",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get room info form a floor id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/smarthouse/floor/2/room",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"smarthouse",
+						"floor",
+						"2",
+						"room"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get room id from floor id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/smarthouse/floor/1/room/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"smarthouse",
+						"floor",
+						"1",
+						"room",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
