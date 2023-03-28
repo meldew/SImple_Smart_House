@@ -73,10 +73,36 @@
 					"port": "8000",
 					"path": [
 						"smarthouse",
-						"device",
+						"sensor",
                         "3",
 						"current"
 					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST current sensor value to SmartHouse",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"value\": 18 }"
+				},
+				"url": {
+					"raw": "localhost:8000/smarthouse/sensor/3/current",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"smarthouse",
+						"sensor",
+						"123",
+						"current"
+					],
+					"query": []
 				}
 			},
 			"response": []
