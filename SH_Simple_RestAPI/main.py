@@ -5,6 +5,7 @@
 # uvicorn main:app --reload
 
 import uvicorn
+import random
 
 from fastapi import FastAPI, Response, status
 from fastapi.staticfiles import StaticFiles
@@ -93,11 +94,12 @@ async def GetSmarthouseDeviceStatus(did : int, response: Response):
 
 @app.post("/smarthouse/sensor/{did}/current")
 async def PostSmartHouseSensorCurrent(did : int):
+    value = random.randint(0, 50)
     for floor in smart_house.floors:
         for room in floor.rooms:
             for device in room.devices:
                 if device.did == did and device.is_sensor():
-                    return json.dumps(str(device.set_current_value(device.get_current_value())))   
+                    return json.dumps(str(device.set_current_value(value)))   
 
 
 @app.get("/smarthouse/sensor/{did}/values?limit=n")
