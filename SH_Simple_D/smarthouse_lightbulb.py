@@ -27,23 +27,24 @@ class Actuator:
 
         logging.info(f"Actuator Client {self.did} starting")
 
-        # TODO START
+        loop = True
+        while loop:
+            request = requests.get("http://localhost:8000/smarthouse/actuator/1/current")
+            value = request.json()
+            self.state = ActuatorState(value)
+            time.sleep(1)
         # send request to cloud service with regular intervals and
         # set state of actuator according to the received response
 
         logging.info(f"Client {self.did} finishing")
 
-        # TODO END
-
     def run(self):
 
-        pass
-        # TODO START
+        simulatorthread = threading.Thread(target=self.simulator)
+        simulatorthread.start()
 
-        # start thread simulating physical light bulb
+        clientThread = threading.Thread(target=self.client)
+        clientThread.start()
 
-        # start thread receiving state from the cloud
-
-        # TODO END
-
+        return simulatorthread, clientThread
 
