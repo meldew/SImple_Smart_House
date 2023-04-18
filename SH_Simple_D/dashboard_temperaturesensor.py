@@ -12,13 +12,12 @@ def refresh_btn_cmd(temp_widget, did):
 
     logging.info("Temperature refresh")
 
-    # TODO START
     # send request to cloud service to obtain current temperature
-
+    request = requests.get("http://localhost:8000/smarthouse/sensor/8/current")
+    value = request.json()
     # replace statement below with measurement from response
     sensor_measurement = SensorMeasurement(init_value="-273.15")
-
-    # TODO END
+    sensor_measurement.set_temperature(value)
 
     # update the text field in the user interface
     temp_widget['state'] = 'normal' # to allow text to be changed
