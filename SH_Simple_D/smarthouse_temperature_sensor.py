@@ -33,6 +33,7 @@ class Sensor:
 
         converter_str2json = json.dumps(self.measurement)
         http_link = "http://localhost:8000/smarthouse/device/{self.did}"
+        
         requests.put(http_link, data=converter_str2json)
         
         logging.info(f"Client {self.did} finishing")
