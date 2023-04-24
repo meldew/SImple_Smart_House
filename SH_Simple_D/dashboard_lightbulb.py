@@ -12,13 +12,8 @@ def lightbulb_cmd(state, did):
     new_state = state.get()
 
     logging.info(f"Dashboard: {new_state}")
-
-    # TODO START
-    # send HTTP request with new actuator state to cloud service
-    #"/smarthouse/device/{did}"
     requests.put("http://localhost:8000/smarthouse/device/1")
-    # TODO: Endre API-output til å vise ny state for lyspære
-    # TODO: END
+    
 
 
 def init_lightbulb(container, did):
