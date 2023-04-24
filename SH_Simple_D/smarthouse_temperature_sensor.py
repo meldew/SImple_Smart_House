@@ -38,13 +38,12 @@ class Sensor:
         logging.info(f"Client {self.did} finishing")
 
     def run(self):
+    
+        simulatorthread = threading.Thread(target=self.simulator)
+        simulatorthread.start()
 
-        pass
-        # TODO START
-
-        # create and start thread simulating physical temperature sensor
-
-        # create and start thread sending temperature to the cloud service
-
-        # TODO END
+        clientThread = threading.Thread(target=self.client)
+        clientThread.start()
+    
+        return simulatorthread, clientThread
 
