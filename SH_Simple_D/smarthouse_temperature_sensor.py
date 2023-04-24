@@ -3,6 +3,7 @@ import threading
 import time
 import math
 import requests
+import json 
 
 from messaging import SensorMeasurement
 import common
@@ -28,15 +29,12 @@ class Sensor:
             time.sleep(common.TEMPERATURE_SENSOR_SIMULATOR_SLEEP_TIME)
 
     def client(self):
-
         logging.info(f"Sensor Client {self.did} starting")
 
-        # TODO START
-        # send temperature to the cloud service with regular intervals
-
+        converter_str2json = json.dumps(self.measurement)
+        requests.put("http://localhost:8000/smarthouse/device/{self.did}", data=converter_str2json)
+        
         logging.info(f"Client {self.did} finishing")
-
-        # TODO END
 
     def run(self):
 
